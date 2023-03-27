@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 이력서
-parent: UI Components
+parent: 프로필
 nav_order: 1
 ---
 
