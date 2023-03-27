@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TIL
-parent: 아카이브
+title: Today I Learned
+parent: Archive
 nav_order: 1
 ---

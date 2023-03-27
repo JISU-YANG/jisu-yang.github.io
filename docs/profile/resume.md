@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 이력서
-parent: 프로필
+parent: WhoAmI
 nav_order: 1
 ---
 
