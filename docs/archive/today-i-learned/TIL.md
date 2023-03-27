@@ -1,5 +1,6 @@
 ---
 layout: default
 title: Today I Learned
-nav_order: 4
+parent: Archive
+nav_order: 1
 ---

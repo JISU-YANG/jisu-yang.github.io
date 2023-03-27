@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 포트폴리오
-nav_order: 3
+parent: WhoAmI
+nav_order: 2
 ---
 
 
