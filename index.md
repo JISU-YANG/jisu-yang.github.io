@@ -10,7 +10,7 @@ has_toc: false
 # Back-End Developer
 
 ## 사색하는 개발자, 양지수 입니다.
-{:class경=".d-inline-block .flex-justify-between"}
+{:class=".d-inline-block .flex-justify-between"}
     
 ![caption](/_assets/profile.jpeg)
 
