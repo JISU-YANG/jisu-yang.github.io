@@ -7,5 +7,15 @@ has_toc: false
 ---
 
 
-Profile
+# Back-End Developer
 
+## 사색하는 개발자, 양지수 입니다.
+{: .d-inline-block .flex-justify-between}
+    
+![](./_assets/profile.jpeg)
+
+- 발명가의 꿈을 이루는 중입니다.
+- 관찰과 분석으로 이해하는 것을 좋아합니다.
+- 필요하면 반드시 해냅니다.
+- 생산성, 라이프스타일 툴에 관심이 많습니다.
+- 품위있고 성숙한 사람이 되려고 노력합니다.
