@@ -10,10 +10,9 @@ has_toc: false
 # Back-End Developer
 
 ## 사색하는 개발자, 양지수 입니다.
-{:class=".d-inline-block .flex-justify-between"}
+{:class경=".d-inline-block .flex-justify-between"}
     
-![caption]({{"/_assets/profile.jpeg"| relative_url}})
-*caption*
+![caption](/_assets/profile.jpeg)
 
 - 발명가의 꿈을 이루는 중입니다.
 - 관찰과 분석으로 이해하는 것을 좋아합니다.
