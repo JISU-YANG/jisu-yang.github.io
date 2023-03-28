@@ -3,6 +3,7 @@ description:
 theme: just-the-docs
 
 url: https://jisu-yang.github.io/
+baseurl: 'jisu-yang.github.io/'
 
 # ---Search ---
 
