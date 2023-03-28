@@ -12,7 +12,7 @@ has_toc: false
 ## 사색하는 개발자, 양지수 입니다.
 {:class=".d-inline-block .flex-justify-between"}
     
-![caption](./assets/profile.jpeg)
+![caption](./assets/profile.jpeg){: width:"300", height="300"}{:center}
 
 - 발명가의 꿈을 이루는 중입니다.
 - 관찰과 분석으로 이해하는 것을 좋아합니다.
