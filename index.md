@@ -9,9 +9,12 @@ has_toc: false
 
 # 👋 만나서 반가워요
 
-## 사색하는 개발자, 🧑🏻‍💻 양지수 입니다.
-    
-![caption](./assets/profile.jpeg){: width="400" height="400"}
+## 사색하는 개발자,
+## 🧑🏻‍💻 양지수 입니다.
+
+<br>
+
+![caption](./assets/profile.jpeg){: width="300" height="300"}
 
 - 발명가의 꿈을 이루는 중입니다.
 - 관찰과 분석으로 이해하는 것을 좋아합니다.
