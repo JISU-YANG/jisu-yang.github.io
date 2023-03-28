@@ -12,7 +12,7 @@ has_toc: false
 ## 사색하는 개발자, 양지수 입니다.
 {:class=".d-inline-block .flex-justify-between"}
     
-![caption]({{"./_assets/profile.jpeg"| relative_url}})
+![caption]({{"/_assets/profile.jpeg"| relative_url}})
 *caption*
 
 - 발명가의 꿈을 이루는 중입니다.
