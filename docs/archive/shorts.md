@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Today I Learned
+title: Shorts
 parent: Archive
 nav_order: 1
 ---
