@@ -4,8 +4,8 @@ title: What is next
 parent: Introduce
 nav_order: 2
 ---
-# 2023.
----
+# 2023
+{: .text-center .mb-8 }
 
 <style>
   table > tbody > tr > td:first-child{
@@ -68,7 +68,8 @@ nav_order: 2
 
 ---
 
-## Next Topic
+### Next Topic
+{: .text-center .mb-6 }
 
 - [ ] [REST와 RESTful의 차이](https://dev-coco.tistory.com/97)
 - [ ] [JPA, Hibernate, Spring Date JPA 차이](https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/)
@@ -76,15 +77,20 @@ nav_order: 2
 
 ---
 
-## JISULOG Update Plan
+### JISULOG Update Plan
+{: .text-center .mb-6 }
 
 - 한 곳에 모든 자료 통합하기
    - GitHub Pages 만들기 `✔ 03.27`
    - 도메인 연결하기 `✔ 04.07`
    - Notion, Tistory, GitHub, Velog 자료 이전하기 `▶ PLAY`
+
+
 - 카테고리 최적화
   - 2단 카테고리 구성하기 `✔ 04.06`
   - 카레고리 항상 펼침 기능 추가하기 `✔ 04.07`
+
+
 - 검색 기능 최적화
   - placeholder 수정하기 `✔ 04.07`
   - 다국어(한국어) 이슈 해결하기 `⏭ NEXT`
