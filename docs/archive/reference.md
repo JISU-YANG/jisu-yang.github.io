@@ -9,7 +9,7 @@ nav_order: 3
 #### Table of Contents
 - [HTML/CSS](#htmlcss)
 - [iOS 앱 개발](#ios-앱-개발)
-- [Github Page 제작](#github-page-제작)
+- [GitHub Pages 제작](#github-pages-제작)
 
 ---
 ## HTML/CSS
@@ -37,8 +37,8 @@ nav_order: 3
   - [iOS Firebase Push 사용하기](https://nicgoon.tistory.com/213)
 
 
-## Github Page 제작
-- [M1 Mac에서 Github Blog - Jekyll 환경 설정하기](https://danaing.github.io/etc/2022/03/14/M1-mac-jekyll-setting.html)
+## GitHub Pages 제작
+- [M1 Mac에서 GitHub Pages - Jekyll 환경 설정하기](https://danaing.github.io/etc/2022/03/14/M1-mac-jekyll-setting.html)
 - [Ruby 패키지 매니저 권한 에러 해결하기(Gem::FilePermissionError)](https://madplay.github.io/post/file-permission-error-while-executing-gem)
 - [Jekyll 커맨드 명령어](https://jekyllrb.com/docs/usage/)
 - [Liquid 문법](https://shopify.github.io/liquid/tags/control-flow/)

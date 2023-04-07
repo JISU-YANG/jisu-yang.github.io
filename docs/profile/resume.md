@@ -33,12 +33,12 @@ nav_order: 1
             <strong>Blog</strong>
         </td>
         <td>
-            <a href="https://jisu-yang/github.io">https://jisu-yang/github.io</a>
+            <a href="https://jisulog.com">https://jisulog.com</a>
         </td>
     </tr>
     <tr>
         <td>
-            <strong>Github</strong>
+            <strong>GitHub</strong>
         </td>
         <td>
             <a href="https://github.com/JISU-YANG ">https://github.com/JISU-YANG </a>
