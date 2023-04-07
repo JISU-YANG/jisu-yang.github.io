@@ -69,8 +69,9 @@ nav_order: 2
 ---
 
 ### Topic
-- 도메인 주도적 설계에 대해 알아보기
 - [REST와 RESTful의 차이](https://dev-coco.tistory.com/97)
+- [JPA, Hibernate, Spring Date JPA 차이](https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/)
+- 도메인 주도적 설계에 대해 알아보기
 
 ---
 
