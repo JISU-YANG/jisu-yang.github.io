@@ -7,11 +7,15 @@ nav_order: 3
 
 ---
 #### Table of Contents
+- [GitHub](#GitHub)
 - [HTML/CSS](#htmlcss)
 - [iOS 앱 개발](#ios-앱-개발)
 - [GitHub Pages 제작](#github-pages-제작)
 
 ---
+## GitHub
+- [사용중인 GitHub 계정 변경하는 방법](https://www.lainyzine.com/ko/article/how-to-change-the-github-account-used-by-the-development-environment/)
+
 ## HTML/CSS
 - [리스트 종류 및 하위 리스트](http://lecturewebprogramming.blogspot.com/2012/09/html_30.html)
 
