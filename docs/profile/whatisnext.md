@@ -69,7 +69,7 @@ nav_order: 2
 ---
 
 ### Next Topic
-{: .text-center .mb-6 }
+{: .mb-4 }
 
 - [ ] [REST와 RESTful의 차이](https://dev-coco.tistory.com/97)
 - [ ] [JPA, Hibernate, Spring Date JPA 차이](https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/)
@@ -78,7 +78,7 @@ nav_order: 2
 ---
 
 ### JISULOG Update Plan
-{: .text-center .mb-6 }
+{: .mb-4 }
 
 - 한 곳에 모든 자료 통합하기
    - GitHub Pages 만들기 `✔ 03.27`
