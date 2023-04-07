@@ -5,7 +5,7 @@ parent: Introduce
 nav_order: 2
 ---
 # 2023
-{: .text-center .mb-8 }
+{: .text-center .mb-6 }
 
 <style>
   table > tbody > tr > td:first-child{
