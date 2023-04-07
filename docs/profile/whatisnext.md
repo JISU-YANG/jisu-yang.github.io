@@ -37,6 +37,7 @@ nav_order: 2
                 <ul>
                     <li><details><summary><s><a href="https://roadmap.sh">개발자 로드맵</a>을 따라 공부 계획 세우기</s></summary>전부 필요하지 않고, 깊이 있는 공부가 어렵다는 피드백으로 인해 보류</details></li>
                     <li>도움이 되었던 참고자료 기록하는 습관가지기 <code>✔ 04.07</code></li>
+                    <li>코드 리뷰, 트러블 슈팅, 리팩토링 경험 쌓고 정리하기</li>
                     <li>TDD 방법론을 공부해서 견고하게 개발하기</li>
                 </ul>
             </td>
@@ -46,9 +47,8 @@ nav_order: 2
             <td>
                 <ul>
                     <li>지인의 불편함을 개선하는 서비스를 개발해서 선물하기 <code>✔ 02.18</code></li>
-                    <li>낮선 환경에서 개발 시도해보기 <code>✔ 03.16</code></li>
+                    <li>낮선 환경의 개발 시도해보기 <code>✔ 03.16</code></li>
                     <li>매력적인 알고리즘 하나 내 것으로 만들기</li>
-                    <li>코드 리뷰, 트러블 슈팅, 리팩토링 경험 쌓고 정리하기</li>
                     <li>해커톤에 참가해서 기지 발휘하기</li>
                 </ul>
             </td>
@@ -68,19 +68,23 @@ nav_order: 2
 
 ---
 
-### Topic
-- [REST와 RESTful의 차이](https://dev-coco.tistory.com/97)
-- [JPA, Hibernate, Spring Date JPA 차이](https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/)
-- 도메인 주도적 설계에 대해 알아보기
+## Next Topic
+
+- [ ] [REST와 RESTful의 차이](https://dev-coco.tistory.com/97)
+- [ ] [JPA, Hibernate, Spring Date JPA 차이](https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/)
+- [ ] 도메인 주도적 설계에 대해 알아보기
 
 ---
 
-### 지수로그
-- 프로필 페이지, TIL, 개발 에세이 블로그 통합하기
-  - Github Page 만들기  `✔ 03.27`
-  - 자료 이전하기 `▶ PLAY`
-  - 도메인 연결하기 `⏭ NEXT`
-- 카레고리 항상 펼침 기능 추가하기 `✔ 04.07`
-- 검색 기능 커스텀하기 
+## JISULOG Update Plan
+
+- 한 곳에 모든 자료 통합하기
+   - GitHub Pages 만들기 `✔ 03.27`
+   - 도메인 연결하기 `✔ 04.07`
+   - Notion, Tistory, GitHub, Velog 자료 이전하기 `▶ PLAY`
+- 카테고리 최적화
+  - 2단 카테고리 구성하기 `✔ 04.06`
+  - 카레고리 항상 펼침 기능 추가하기 `✔ 04.07`
+- 검색 기능 최적화
   - placeholder 수정하기 `✔ 04.07`
-  - 다국어(한국어) 이슈 해결하기
+  - 다국어(한국어) 이슈 해결하기 `⏭ NEXT`
