@@ -1,24 +1,34 @@
 ---
-layout: default
+layout: post
 title: Reference
 parent: Archive
 nav_order: 3
----
+toc: true
 
 ---
-#### Table of Contents
-- [GitHub](#GitHub)
-- [HTML/CSS](#htmlcss)
-- [iOS 앱 개발](#ios-앱-개발)
-- [GitHub Pages 제작](#github-pages-제작)
+**Reference History**
+1. 적합한 상황
+2. 정확한 정보
+3. 상세한 설명
 
 ---
+
+# Subject By
+## IntelliJ
+- [Mac 세로편집모드 단축키](https://islet4you.tistory.com/entry/Intellij-%EC%84%B8%EB%A1%9C%ED%8E%B8%EC%A7%91%EB%AA%A8%EB%93%9C-%EC%A0%84%ED%99%98-%EB%8B%A8%EC%B6%95%ED%82%A4)
+
 ## GitHub
 - [사용중인 GitHub 계정 변경하는 방법](https://www.lainyzine.com/ko/article/how-to-change-the-github-account-used-by-the-development-environment/)
 
-## HTML/CSS
-- [리스트 종류 및 하위 리스트](http://lecturewebprogramming.blogspot.com/2012/09/html_30.html)
+## HTML/CSS, Markdown
+- [HTML 리스트 종류 및 하위 리스트](http://lecturewebprogramming.blogspot.com/2012/09/html_30.html)
+- [CSS 리스트 기호 변경](https://hadrysmateusz.com/blog/css-list-styling)
+- [underline css로 색 변경하기](https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php)
+- [SCSS -> CSS 웹 컨버터](https://www.sassmeister.com/)
 
+---
+
+# Group By
 ## iOS 앱 개발
 - ### Appstore
   - [앱스토어 배포 과정](https://velog.io/@heyksw/iOS-%EC%95%B1%EC%8A%A4%ED%86%A0%EC%96%B4-%EB%B0%B0%ED%8F%AC%EA%B3%BC%EC%A0%95)
@@ -39,7 +49,6 @@ nav_order: 3
   - [Firebase AppDelegate 예시](https://github.com/firebase/quickstart-ios/blob/master/messaging/MessagingExampleSwift/AppDelegate.swift)
   - [FCM을 사용한 Swift Push 알림만들기](https://m.blog.naver.com/PostView.nhn?blogId=whdals0&logNo=221117010124&proxyReferer=https:%2F%2Fwww.google.com%2F)
   - [iOS Firebase Push 사용하기](https://nicgoon.tistory.com/213)
-
 
 ## GitHub Pages 제작
 - [M1 Mac에서 GitHub Pages - Jekyll 환경 설정하기](https://danaing.github.io/etc/2022/03/14/M1-mac-jekyll-setting.html)
