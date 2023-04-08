@@ -176,11 +176,6 @@ generating the nav links for a collection that includes `page`, AND `...` holds.
             {%- for child in children_list -%}
             {%- unless child.nav_exclude -%}
             <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
-                {%- if child.has_children -%}
-                <a href="#" class="nav-list-expander" aria-label="toggle links in {{ child.title }} category">
-                    <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-                </a>
-                {%- endif -%}
                 <a href="{{ child.url | relative_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
                 {%- if child.has_children -%}
                 {%- assign grand_children_list = third_level_pages
