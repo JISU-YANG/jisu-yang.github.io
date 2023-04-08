@@ -5,6 +5,9 @@ theme: just-the-docs
 url: https://jisu-yang.github.io/
 #baseurl: 'jisu-yang.github.io/'
 
+plugins:
+  - jekyll-toc
+
 # ---Search ---
 
 # Enable or disable the site search

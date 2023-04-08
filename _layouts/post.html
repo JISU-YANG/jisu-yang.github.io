@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<style>
+    #index-content {
+        position: absolute;
+        display: none;
+        top: 0;
+        right:-260px;
+        width: 260px;
+    }
+    @media (min-width: 1500px) {
+        #index-content {
+            display: flex;
+            opacity: 1;
+        }
+    }
+    #index-bar{
+        position: fixed;
+        width: 260px;
+        height: 100vh;
+        padding-top:  110px;
+        padding-left: 20px;
+        border-left: 1px dashed #eeebee;
+
+    }
+    #index-title{
+        font-weight: bold;
+        color: #5c5962;
+        margin-bottom: 1em;
+    }
+    #index-item li.toc-h1,
+    #index-item li.toc-h2,
+    #index-item li.toc-h3{
+        list-style-type: decimal;
+        color: #e6e1e8;
+        font-size: 14px;
+        margin-bottom: 14px;
+        /*margin-left: 1em;*/
+    }
+    #index-item ul li:before {
+        display: none;
+    }
+    #index-item a,
+    #index-item a:link,
+    #index-item a:after{
+        color: #959396;
+        text-decoration: underline;
+        text-decoration-color: #eeebee;
+        text-underline-offset: 2px;
+    }
+</style>
+
+<div>
+    <div id="index-content">
+        <div id="index-bar">
+            <div id="index-title">목차</div>
+            <div id="index-item">
+                {{ content | toc_only }}
+            </div>
+        </div>
+
+    </div>
+
+    <div id="markdown-content">
+        {{ content | inject_anchors }}
+    </div>
+</div>
