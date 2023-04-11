@@ -52,13 +52,24 @@ layout: post
         text-decoration-color: #eeebee;
     }
     #thumbnail-content img{
-        width: 100%;
-        margin: 1em 0;
+        max-width: 90%;
+        max-height: 300px;
+        margin: 2em 0;
+        padding: 1em;
+        border: 1px solid #eeebee;
         border-radius: 4px;
-
     }
     #stack-content table tr td:first-child{
         font-weight: bold;
+    }
+    span.role-contribution{
+        margin-left: 0.4em;
+        color: #959396;
+        font-size: 0.8em;
+        vertical-align: bottom;
+    }
+    h2{
+        color: #7253ed;
     }
 </style>
 
@@ -126,11 +137,11 @@ layout: post
 <h2 id="시작하며">시작하며</h2>
 
 <div>
-    <h3 id="담당기능">담당기능</h3>
+    <h3 id="담당업무">담당업무</h3>
     <ul>
-        {% assign roleList = page.intro.role | split: ", " %}
+        {% assign roleList = page.intro.role %}
         {% for item in roleList %}
-        <li>{{ item }}</li>
+        <li>{{ item[1].script }} <span class="role-contribution">{{ item[1].contribution }}%</span></li>
         {% endfor %}
     </ul>
 </div>
