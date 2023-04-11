@@ -1,0 +1,200 @@
+---
+layout: post
+---
+<style>
+    #summary-list{
+        display: flex;
+        justify-content: space-between;
+        margin: 120px 0 24px 0;
+        width: 100%;
+        padding: 1em;
+        border: 1px solid #eeebee;
+        border-radius: 4px;
+    }
+    .summary-item{
+        display: flex;
+        flex-direction: column;
+    }
+    #summary-item-name{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    #summary-item-subject{
+        color: #7253ed;
+        font-size: large;
+        font-weight: bold;
+    }
+    .summary-item-head{
+        font-size: small;
+        color: #7253ed;
+        font-weight: bold;
+    }
+    .summary-item-body{
+        font-size: large;
+        font-weight: bold;
+        margin: 0.4em 0;
+    }
+    .summary-item-script{
+        display: inline-flex;
+        font-size: small;
+        color: #959396;
+    }
+    .summary-item-script > div{
+        margin-right: 1em;
+    }
+
+    .summary-item-script a,
+    .summary-item-script a:link,
+    .summary-item-script a:visited,
+    .summary-item-script a:hover{
+        color: #959396;
+        cursor: pointer;
+        text-decoration-color: #eeebee;
+    }
+    #thumbnail-content img{
+        width: 100%;
+        margin: 1em 0;
+        border-radius: 4px;
+
+    }
+    #stack-content table tr td:first-child{
+        font-weight: bold;
+    }
+</style>
+
+<hr>
+
+<div>
+    {% assign summary = page.summary %}
+    <div>
+        <div id="summary-item-subject">{{ summary.service.name }}</div>
+        <div id="summary-item-name">{{ summary.service.subject }}</div>
+    </div>
+
+    <div id="summary-list">
+        <div class="summary-item">
+            <div class="summary-item-head">
+                플랫폼
+            </div>
+            <div class="summary-item-body">
+                {{ summary.platform.environment }}
+            </div>
+            <div class="summary-item-script">
+                <div>
+                    {% if summary.platform.demo == "n" %}
+                    <s><a href="#">Demo</a></s>
+                    {% else %}
+                    <a href="{{ summary.platform.demo }}">Demo</a>
+                    {% endif %}
+                </div>
+                <div>
+                    {% if summary.platform.github == "n" %}
+                    <s><a href="#">GitHub</a></s>
+                    {% else %}
+                    <a href="{{ summary.platform.github }}">GitHub</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-item-head">
+                인원
+            </div>
+            <div class="summary-item-body">
+                {{ summary.people.number }}
+            </div>
+            <div class="summary-item-script">
+                {{ summary.people.script }}
+            </div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-item-head">
+                기간
+            </div>
+            <div class="summary-item-body">
+                {{ summary.period.day }}
+            </div>
+            <div class="summary-item-script">
+                {{ summary.period.date }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<h2 id="시작하며">시작하며</h2>
+
+<div>
+    <h3 id="담당기능">담당기능</h3>
+    <ul>
+        {% assign roleList = page.intro.role | split: ", " %}
+        {% for item in roleList %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<hr>
+
+<div id="stack-content">
+    <h3 id="기술스택">기술스택</h3>
+    {% assign stackList = page.intro.tech_stack %}
+
+    <table>
+        <tbody>
+        {% for stack in stackList %}
+        {% if stack[1] != "n" %}
+        <tr>
+            {% case stack[0] %}
+            {% when "language" %}
+            <td>언어</td>
+            {% when "server" %}
+            <td>서버</td>
+            {% when "framework" %}
+            <td>프레임워크</td>
+            {% when "api_and_library" %}
+            <td>API, Library</td>
+            {% when "database" %}
+            <td>데이터베이스</td>
+            {% when "ide" %}
+            <td>IDE</td>
+            {% endcase %}
+            <td>
+                <ul>
+                    {% assign itemList = stack[1] | split: ", " %}
+                    {% for item in itemList %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<hr>
+
+<div id="thumbnail-content">
+    <h3 id="미리보기">미리보기</h3>
+    {% assign imgList = page.intro.thumbnail | split: ", " %}
+    {% for img in imgList %}
+    <img src="{{ img }}" alt="{{ img }}">
+    {% endfor %}
+</div>
+
+
+<hr>
+
+{{ content }}
+
+<!--summary:-->
+<!--period: 19.05.03 ~ 19.05.08, 6일-->
+<!--platform: 데스크탑-->
+<!--people: 2명 (팀장)-->
+<!--role:-->
+<!--1: 첫번째-->
+<!--2: 두번쨰-->
+<!--3: 세번째-->
