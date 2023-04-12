@@ -8,7 +8,14 @@ nav_order: 1
 
 <div class="flex-justify-between mb-4" style="display: inline-flex; width:100%">
     <div>
-        <img width="260" src="/assets/profile_resume.JPG"/>
+        <img id="profile-image" width="260" />
+        <script>
+            ImageDeliver
+                .id('profile-image')
+                .category(PathResource.PROFILE)
+                .file('profile_resume.JPG')
+                .delivery();
+        </script>
     </div>
     <div style="text-align: right; min-width: 320px">
         <h2>사색하는 개발자, 양지수 입니다.</h2>
@@ -16,8 +23,6 @@ nav_order: 1
         <h4 class="text-grey-dk-000" style="padding-top: 80px">Last updated: 2023.03.30</h4>
     </div>
 </div>
-
-
 
 <table>
     <tr>

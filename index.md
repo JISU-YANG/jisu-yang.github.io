@@ -13,7 +13,14 @@ has_toc: false
 
 <br>
 
-![caption](./assets/profile.jpeg){: width="200" height="200"}
+<img id="home-image" width="200"/>
+<script>
+    ImageDeliver
+        .id('home-image')
+        .category(PathResource.PROFILE)
+        .file('profile.jpeg')
+        .delivery();
+</script>
 
 - 발명가의 꿈을 이루는 중입니다.
 - 관찰과 분석으로 이해하는 것을 좋아합니다.

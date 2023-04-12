@@ -43,7 +43,7 @@ intro:
         4:
             script: 프로젝트 투자 유치
             contribution: 40
-    thumbnail: ./resource/2018-History-Image.gif, ./resource/2018-History-Image2.png
+    thumbnail: 2018-History-Image.gif, 2018-History-Image2.png
 ---
 
 
