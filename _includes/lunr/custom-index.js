@@ -1,0 +1,25 @@
+const content_to_merge = [
+    docs[i].content,
+    docs[i].serviceName,
+    docs[i].serviceSubject,
+    docs[i].platformEnvironment,
+    docs[i].platformDemo,
+    docs[i].platformGithub,
+    docs[i].periodDate,
+    docs[i].periodDay,
+    docs[i].peopleNumber,
+    docs[i].peopleScript,
+    docs[i].stackLanguage,
+    docs[i].stackServer,
+    docs[i].stackFramework,
+    docs[i].stackApi_and_library,
+    docs[i].stackDatabase,
+    docs[i].stackIde,
+    docs[i].roleScript1,
+    docs[i].roleScript2,
+    docs[i].roleScript3,
+    docs[i].roleScript4,
+    docs[i].roleScript5,
+    docs[i].roleScript6
+];
+docs[i].content = content_to_merge.join(' ');
