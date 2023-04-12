@@ -50,8 +50,10 @@ toc: true
   - [FCM을 사용한 Swift Push 알림만들기](https://m.blog.naver.com/PostView.nhn?blogId=whdals0&logNo=221117010124&proxyReferer=https:%2F%2Fwww.google.com%2F)
   - [iOS Firebase Push 사용하기](https://nicgoon.tistory.com/213)
 
-## GitHub Pages 제작
+## GitHub Pages
 - [M1 Mac에서 GitHub Pages - Jekyll 환경 설정하기](https://danaing.github.io/etc/2022/03/14/M1-mac-jekyll-setting.html)
 - [Ruby 패키지 매니저 권한 에러 해결하기(Gem::FilePermissionError)](https://madplay.github.io/post/file-permission-error-while-executing-gem)
 - [Jekyll 커맨드 명령어](https://jekyllrb.com/docs/usage/)
 - [Liquid 문법](https://shopify.github.io/liquid/tags/control-flow/)
+- [Lunr.js 한국어 검색 적용](https://github.com/olosia/olosia.github.io/commit/fda13ac8fd51c49dfcd81bbd4b726658668234c8)
+- [GitHub 대신 jsdelivr CDN으로 Image 불러오기](https://chinsun9.github.io/2021/05/31/%EA%B9%83%ED%97%88%EB%B8%8C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%8A%90%EB%A6%B0-%EC%9B%B9-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/)
