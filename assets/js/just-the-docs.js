@@ -351,12 +351,6 @@ function searchLoaded(index, docs) {
         }
       }
 
-      {%- if site.search.rel_url != false %}
-      var resultRelUrl = document.createElement('span');
-      resultRelUrl.classList.add('search-result-rel-url');
-      resultRelUrl.innerText = doc.relUrl;
-      resultTitle.appendChild(resultRelUrl);
-      {%- endif %}
     }
 
     function addHighlightedText(parent, text, start, end, positions) {
