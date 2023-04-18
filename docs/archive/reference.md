@@ -57,3 +57,8 @@ toc: true
 - [Liquid 문법](https://shopify.github.io/liquid/tags/control-flow/)
 - [Lunr.js 한국어 검색 적용](https://github.com/olosia/olosia.github.io/commit/fda13ac8fd51c49dfcd81bbd4b726658668234c8)
 - [GitHub 대신 jsdelivr CDN으로 Image 불러오기](https://chinsun9.github.io/2021/05/31/%EA%B9%83%ED%97%88%EB%B8%8C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%8A%90%EB%A6%B0-%EC%9B%B9-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/)
+
+## Notion API
+- [Notion 통합 - 권한 부여](https://developers.notion.com/docs/authorization#integration-capabilities)
+- [Notion API Postman Sample](https://www.postman.com/notionhq/workspace/notion-s-api-workspace/request/15568543-d23f8f9c-e220-46d8-9ac2-aab80b909a42)
+- [DB 프로퍼티 타입별 JSON 값](https://developers.notion.com/reference/page-property-values#rich-text)
