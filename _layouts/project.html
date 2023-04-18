@@ -201,11 +201,13 @@ layout: post
 
 {{ content }}
 
-<!--summary:-->
-<!--period: 19.05.03 ~ 19.05.08, 6일-->
-<!--platform: 데스크탑-->
-<!--people: 2명 (팀장)-->
-<!--role:-->
-<!--1: 첫번째-->
-<!--2: 두번쨰-->
-<!--3: 세번째-->
+<script>
+    document.querySelectorAll('.cdn-img').forEach(item => {
+        ImageDeliver
+            .id(item.id)
+            .category(PathResource.PROJECT_REVIEW)
+            .file(item.id)
+            .delivery();
+    });
+</script>
+
