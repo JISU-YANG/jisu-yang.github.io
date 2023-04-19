@@ -5,46 +5,83 @@ layout: default
 <style>
     #index-content {
         position: absolute;
-        display: none;
         top: 0;
         right:-260px;
         width: 260px;
     }
-    @media (min-width: 1500px) {
-        #index-content {
-            display: flex;
-            opacity: 1;
-        }
-    }
-    #index-bar{
+
+    #index-right-bar{
         position: fixed;
         width: 260px;
         height: 100vh;
         padding-top:  110px;
         padding-left: 20px;
         border-left: 1px dashed #eeebee;
+        visibility: hidden;
 
     }
-    #index-title{
+    @media (min-width: 31.25em) {
+        #index-right-bar{
+            visibility: visible;
+        }
+    }
+
+    #index-left-bar{
+        position: fixed;
+        right: 2em;
+        bottom: 2em;
+        width: 60px;
+        height: 45px;
+        padding: 0.5em;
+        background: rgba(255,255,255,0.9);
+        border: 1px solid #eeebee;
+        overflow: hidden;
+        visibility: visible;
+        z-index: 10;
+        text-align: center;
+        transition: all 0.125s ease-out;
+        border-radius: 2em;
+    }
+    @media (min-width: 66.5em) {
+        #index-left-bar{
+            visibility: hidden;
+        }
+    }
+    #index-left-bar:hover{
+        width: 260px;
+        height: auto;
+        padding: 1em;
+        text-align: left;
+        transition: all 0.125s ease-out;
+        border-radius: 0;
+    }
+    /*@media (min-width: 50rem){*/
+    /*    #index-left-bar{*/
+    /*        visibility: visible;*/
+    /*    }*/
+    /*}*/
+    .index-title{
         font-weight: bold;
         color: #5c5962;
         margin-bottom: 1em;
+        cursor: pointer;
     }
-    #index-item li.toc-h1,
-    #index-item li.toc-h2,
-    #index-item li.toc-h3{
+    .index-item li.toc-h1,
+    .index-item li.toc-h2,
+    .index-item li.toc-h3{
         list-style-type: decimal;
         color: #e6e1e8;
         font-size: 14px;
         margin-bottom: 14px;
         /*margin-left: 1em;*/
     }
-    #index-item ul li:before {
+    .index-item ul li:before {
         display: none;
     }
-    #index-item a,
-    #index-item a:link,
-    #index-item a:after{
+    .index-item a,
+    .index-item a:link,
+    .index-item a:after,
+    .index-item a:visited{
         color: #959396;
         text-decoration: underline;
         text-decoration-color: #eeebee;
@@ -54,13 +91,18 @@ layout: default
 
 <div>
     <div id="index-content">
-        <div id="index-bar">
-            <div id="index-title">목차</div>
-            <div id="index-item">
+        <div id="index-right-bar">
+            <div class="index-title" onclick="window.scrollTo({top:0, behavior: 'smooth'})">목차</div>
+            <div class="index-item">
                 {{ content | toc_only }}
             </div>
         </div>
-
+        <div id="index-left-bar">
+            <div class="index-title" onclick="window.scrollTo({top:0, behavior: 'smooth'})">목차</div>
+            <div class="index-item">
+                {{ content | toc_only }}
+            </div>
+        </div>
     </div>
 
     <div id="markdown-content">
