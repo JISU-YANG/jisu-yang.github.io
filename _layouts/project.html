@@ -52,12 +52,19 @@ layout: post
         text-decoration-color: #eeebee;
     }
     #thumbnail-content img{
+        display: block;
         max-width: 90%;
         max-height: 300px;
         margin: 2em 0;
         padding: 1em;
         border: 1px solid #eeebee;
         border-radius: 4px;
+        transition: all 0.5s linear;
+    }
+    #thumbnail-content img:hover {
+        max-height: 1200px;
+        transition: all 0.25s linear;
+
     }
     #stack-content table tr td:first-child{
         font-weight: bold;
