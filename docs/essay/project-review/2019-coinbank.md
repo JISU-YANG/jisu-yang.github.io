@@ -15,22 +15,31 @@ summary: # 프로젝트 개요
     platform: # 서비스 플랫폼 @environment: 지원환경 @demo: 데모url @github: 깃헙url, @value: default -> n
         environment: 데스크탑 응용 프로그램  
         demo: n
-        github: https://github.com/
+        github: https://github.com/JISU-YANG/2019_CoinBank
     period: # 개발 기간 @date: 범위 @day: 기간
         date: 19.05.03. ~ 19.05.08.
         day: 6일
     people: # 개발 인원 @number: 인원 수 @script: 비고
         number: 2명
-        script: 팀장, <s>중간 2명 이탈</s>
+        script: 팀장
 intro:
     tech_stack: # 기술 스택 key(index):value(script)
-        language: Java, Test
+        language: Java
         server: n
         framework: n
-        api_and_library: javax.Swing
+        api_and_library: javax
         database: n
         ide: Eclipse
-    role: 첫번째, 두번째, 세번쨰
+    role:
+        1:
+            script: 프로젝트 기획 및 업무 분배
+            contribution: 80
+        2:
+            script: javax의 Swing을 이용한 화면 구성
+            contribution: 100
+        3:
+            script: 전체 기능(로그인, 대시보드, 매도 및 매수, 내역, 마감) 구현
+            contribution: 90
     thumbnail: 2019-coinbank-thumb01.png, 2019-coinbank-thumb02.png
 ---
 
