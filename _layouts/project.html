@@ -51,20 +51,52 @@ layout: post
         cursor: pointer;
         text-decoration-color: #eeebee;
     }
-    #thumbnail-content img{
-        display: block;
-        max-width: 90%;
-        max-height: 300px;
-        margin: 2em 0;
-        padding: 1em;
-        border: 1px solid #eeebee;
-        border-radius: 4px;
-        transition: all 0.5s linear;
+    #thumbnail-container{
+        position: relative;
+        width: 100%;
+        height: 600px;
+        padding: 20px;
+        border-radius: 6px;
+        border: 1px solid  #eeebee;
     }
-    #thumbnail-content img:hover {
-        max-height: 1200px;
-        transition: all 0.25s linear;
-
+    .thumbnail-image{
+        position: absolute;
+        width: calc(100% - 40px);
+        height: 480px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .thumbnail-image img{
+        max-height: 480px;
+        max-width: 100%;
+        border-radius: 6px;
+        object-fit: contain;
+        z-index: 5;
+    }
+    .thumbnail-image img:not(:first-child){
+        display: none;
+    }
+    .thumbnail-stack{
+        display: inline-flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-left:-20px;
+        margin-top: 500px;
+        z-index: 10;
+    }
+    .thumbnail-stack img{
+        width: 60px;
+        height: 60px;
+        margin: 0 10px;
+        border-radius: 60px;
+        padding: 4px;
+        background: #fff;
+        cursor: pointer;
+    }
+    .thumbnail-stack img:first-child{
+        border:1px solid #7253ed;
     }
     #stack-content table tr td:first-child{
         font-weight: bold;
@@ -197,10 +229,20 @@ layout: post
 
 <div id="thumbnail-content">
     <h3 id="미리보기">미리보기</h3>
-    {% assign imgList = page.intro.thumbnail | split: ", " %}
-    {% for img in imgList %}
-    <img src="https://cdn.jsdelivr.net/gh/jisu-yang/jisu-yang.github.io/docs/essay/project-review/resource/{{ img }}" alt="{{ img }}">
-    {% endfor %}
+    <div id="thumbnail-container">
+        <div class="thumbnail-image">
+            {% assign imgList = page.intro.thumbnail | split: ", " %}
+            {% for img in imgList %}
+            <img data-index="{{ forloop.index }}" src="https://cdn.jsdelivr.net/gh/jisu-yang/jisu-yang.github.io/docs/essay/project-review/resource/{{ img }}" alt="{{ img }}">
+            {% endfor %}
+        </div>
+        <div class="thumbnail-stack">
+            {% assign imgList = page.intro.thumbnail | split: ", " %}
+            {% for img in imgList %}
+            <img data-select="{{ forloop.index }}" src="https://cdn.jsdelivr.net/gh/jisu-yang/jisu-yang.github.io/docs/essay/project-review/resource/{{ img }}" alt="{{ img }}">
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 
@@ -216,5 +258,34 @@ layout: post
             .file(item.id)
             .delivery();
     });
+
+    function initImageSlider() {
+        let imageSlideSelectList = document.querySelectorAll('.thumbnail-stack > img');
+        let imageSlideItemList = document.querySelectorAll('img[data-index]');
+
+        imageSlideSelectList.forEach(button => {
+            button.addEventListener('click',function () {
+                let imageSlideShowItem = document.querySelectorAll('img[data-index="'+button.getAttribute('data-select')+'"]');
+
+                imageSlideSelectList.forEach(select => {
+                    select.style.border = "none";
+                });
+                button.style.border = "1px solid #7253ed";
+
+                imageSlideItemList.forEach(item => {
+                    item.style.display = "none";
+                });
+                imageSlideShowItem.forEach(item => {
+                    item.style.display = "block";
+                });
+
+            })
+        })
+    }
+
+    initImageSlider();
+
+
+
 </script>
 
