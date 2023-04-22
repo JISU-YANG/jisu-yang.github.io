@@ -20,11 +20,18 @@ toc: true
 ## GitHub
 - [사용중인 GitHub 계정 변경하는 방법](https://www.lainyzine.com/ko/article/how-to-change-the-github-account-used-by-the-development-environment/)
 
+## Javascript
+- [data 속성을 셀렉터 그룹으로 지정하기](https://stackoverflow.com/a/7084588)
+
 ## HTML/CSS, Markdown
 - [HTML 리스트 종류 및 하위 리스트](http://lecturewebprogramming.blogspot.com/2012/09/html_30.html)
 - [CSS 리스트 기호 변경](https://hadrysmateusz.com/blog/css-list-styling)
 - [underline css로 색 변경하기](https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php)
 - [SCSS -> CSS 웹 컨버터](https://www.sassmeister.com/)
+- [CONVERT CSS TO SASS / SCSS](https://css2sass.herokuapp.com/)
+- [favicon converter](https://favicon.io/favicon-converter/)
+- [이미지에 블러 필터 깔끔하게 적용하기](https://ncoding.tistory.com/22)
+- [이미지 사이즈 맞추기](https://inpa.tistory.com/entry/CSS-%F0%9F%93%9A-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%82%AC%EC%9D%B4%EC%A6%88-%EB%B9%84%EC%9C%A8-%EB%A7%9E%EC%B6%94%EB%8A%94-3%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95-object-fit-background-size-position)
 
 ---
 
