@@ -90,6 +90,7 @@ layout: post
         width: 60px;
         height: 60px;
         margin: 0 10px;
+        border: 1px solid #eeebee;
         border-radius: 60px;
         padding: 4px;
         background: #fff;
@@ -268,9 +269,9 @@ layout: post
                 let imageSlideShowItem = document.querySelectorAll('img[data-index="'+button.getAttribute('data-select')+'"]');
 
                 imageSlideSelectList.forEach(select => {
-                    select.style.border = "none";
+                    select.style.borderColor = "#eeebee";
                 });
-                button.style.border = "1px solid #7253ed";
+                button.style.borderColor = "#7253ed";
 
                 imageSlideItemList.forEach(item => {
                     item.style.display = "none";
