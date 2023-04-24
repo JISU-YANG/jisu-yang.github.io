@@ -27,7 +27,7 @@ intro:
     language: JSP, Java, Javascript, HTML/CSS, SQL
     server: Tomcat
     framework: Spring Framework, MyBatis
-    api_and_library: HTML5 File API, commons-fileupload, commons-io, Spring Security
+    api_and_library: Maven, HTML5 File API, commons-fileupload, commons-io, Spring Security
     database: MariaDB
     ide: Eclipse
   role:
