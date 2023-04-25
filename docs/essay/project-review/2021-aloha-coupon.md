@@ -27,7 +27,7 @@ intro:
     language: Swift/SwiftUI, Java
     server: Tomcat
     framework: Spring Boot
-    api_and_library: Social Login(Kakao, Google, Apple), Firebase FCM Notification, Apple In-App Purchase API, Alamofire, SwiftyJSON, JPA, QueryDsl, Lombok, okhttp3, Jasypt
+    api_and_library: Social Login(Kakao · Google · Apple), Firebase FCM Notification, Apple In-App Purchase API, Alamofire, SwiftyJSON, JPA, QueryDsl, Lombok, okhttp3, Jasypt
     database: MySql
     ide: Xcode
   role:
