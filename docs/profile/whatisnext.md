@@ -84,7 +84,7 @@ nav_order: 2
 - 한 곳에 모든 자료 통합하기
    - GitHub Pages 셋팅 `✔ 03.27`
    - 도메인 A 레코드 연결 `✔ 04.07`
-   - ~~Notion~~, Tistory, GitHub, Velog 자료 이전 `▶ PLAY`
+   - ~~Notion~~, Tistory, GitHub, ~~Velog~~ 자료 이전 `▶ PLAY`
 
 
 - 카테고리 최적화하기
