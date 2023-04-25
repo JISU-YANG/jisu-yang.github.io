@@ -29,7 +29,7 @@ intro:
     framework: Spring Boot
     api_and_library: Social Login(Kakao · Google · Apple), Firebase FCM Notification, Apple In-App Purchase API, Alamofire, SwiftyJSON, JPA, QueryDsl, Lombok, okhttp3, Jasypt
     database: MySql
-    ide: Xcode
+    ide: Xcode, IntelliJ
   role:
     1:
       script: 서비스 기획 및 개발 문서 작성, 업무 분담 및 일정 조율
