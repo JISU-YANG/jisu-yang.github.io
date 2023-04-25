@@ -40,7 +40,7 @@ intro:
     3:
       script: 도메인 설계, API 서버 기능 구현(회원, 프로젝트, 팀원, 메시지)
       contribution: 100
-  thumbnail: 2021-darling-thumb01.png, 2021-darling-thumb02.png
+  thumbnail: 2021-darling-thumb01.jpeg, 2021-darling-thumb02.png
 ---
 
 
@@ -228,4 +228,5 @@ iOS의 위젯을 제작해보는 것은 처음이었다. iOS 14부터 홈 화면
 ---
 
 **협업**
+
 API 서버만 다룰때는 고려하지 못한 것들이 프론트 웹이나 앱을 개발하는 포지션을 맡으면서 데이터 구조를 어떻게 전달하면 좋을지 알게되는 것 같다. 그리고 전체적인 포지션에 대한 경험이 늘수록 반대 상황일때도 소통이 수월하다는 것도 느꼈다.
