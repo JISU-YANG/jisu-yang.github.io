@@ -1,6 +1,6 @@
 ---
 # 페이지 셋팅
-layout: project
+layout: project_review
 title: 약속 관리 노트
 parent: 프로젝트 회고록
 grand_parent: Essay

@@ -1,6 +1,6 @@
 ---
 # 페이지 셋팅
-layout: project
+layout: project_review
 title: 모의 가상화폐 거래소
 parent: 프로젝트 회고록
 grand_parent: Essay

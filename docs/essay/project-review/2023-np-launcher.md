@@ -1,10 +1,10 @@
 ---
 # 페이지 셋팅
-layout: project
+layout: project_review
 title: 북마크 런처 프로그램
 parent: 프로젝트 회고록
 grand_parent: Essay
-nav_order: 1
+nav_order: 12
 nav_exclude: true
 toc: true
 
@@ -40,6 +40,7 @@ intro:
 ## 필요한게 없으면 참지를 못 한다
 ### PC방 런처를 쓰고 싶다
 <img class="cdn-img" id="2023-NPLauncher-PC방런처.PNG">
+
 매번 보던 PC방 런처가 유난히 눈에 들어왔다.
 평소에도 정리정돈에 집착이 강한 편인데 내 데스크탑의 바탕화면과 대조되어 보이기 시작했다.
 그러고는 내가 쓰는 프로그램과 게임으로 PC방 런처의 항목들이 바뀌는게 머릿속에 그러졌다.
@@ -94,6 +95,7 @@ swift로 개발할 때 UserDefaults를 사용한 것과 비슷한 방식이라 �
 ## 베타 버전 제작
 ### 프로토타입 완성
 <img class="cdn-img" id="2023-NPLauncher-구메인화면.png">
+
 <img class="cdn-img" id="2023-NPLauncher-구설정화면.png">
 
 그렇게 많은 타협 끝에 프로그램이 완성되었다.
@@ -132,5 +134,5 @@ swift로 개발할 때 UserDefaults를 사용한 것과 비슷한 방식이라 �
 
 ---
 
-# 마치며
+## 마치며
 새로운 환경에서 개발해보자는 올해 목표 중 하나를 얼떨결에 이루게 되었다. 그보다 이번 프로젝트를 하고 나서 느낀 것인데 어려워보이고 막막해보이는 것도 상대적인 것 같다. 모든 문제는 어떻게든 해결이 되고, 지나고 나서 보면 생각보다 훨씬 쉬워보이는. 당연한 사실 속에 있다는 것이다. 그로서 자신감 또한 많이 생긴 것 같다. 

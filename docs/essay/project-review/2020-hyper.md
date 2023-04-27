@@ -1,6 +1,6 @@
 ---
 # 페이지 셋팅
-layout: project
+layout: project_review
 title: 스마트 북마크 서비스
 parent: 프로젝트 회고록
 grand_parent: Essay

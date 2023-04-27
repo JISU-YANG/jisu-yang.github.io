@@ -1,7 +1,7 @@
 ---
 # 페이지 셋팅
-layout: project
-title: Darling
+layout: project_review
+title: NP-Today
 parent: 프로젝트 회고록
 grand_parent: Essay
 nav_order: 1
@@ -10,10 +10,10 @@ toc: true
 
 summary: # 프로젝트 개요
   service: # 서비스 정보 @name: 이름 @subject: 주제
-    name: Darling
-    subject: 커플 다이어리 앱
+    name: NP-Today
+    subject: 스마트 대시보드
   platform: # 서비스 플랫폼 @environment: 지원환경 @demo: 데모 url @github: 깃헙 url, @value: default -> n
-    environment: 스마트 대시보드
+    environment: 웹 서비스
     demo: https://www.jisuyang.com/today
     github: n
   period: # 개발 기간 @date: 범위 @day: 기간
@@ -66,7 +66,7 @@ Day One(데이원)이라는 앱을 사용하다가 손쉽게 알찬 일기를 �
 ### 보조 서비스
 **웹에서 공유, 노션**
 
-<img class="cdn-img" id="2023-today-image01.png"/>
+<img class="cdn-img" id="2022-today-image01.png"/>
 
 노션에는 기록한 페이지를 손쉽게 웹 페이지로 만들어 주는 기능이 있다. 이 '웹 링크 공유'를 이용하면 간단한 목적으로는 DB와 서버의 역할을 대신할 수 있겠다는 생각이 들었다. 유지비의 부담때문에 서비스 개발을 주저했으나 그 걱정을 덜어주었다.
 
@@ -74,7 +74,7 @@ Day One(데이원)이라는 앱을 사용하다가 손쉽게 알찬 일기를 �
 
 **HTML 편집, oopy**
 
-<img class="cdn-img" id="2023-today-image02.png"/>
+<img class="cdn-img" id="2022-today-image02.png"/>
 
 웹 링크 공유로 웹 페이지로 탄생한 노션 페이지를 도메인과 연결해주고, 간단한 스타일 적용을 지원하고, HTML 편집도 가능하게 해주는 oopy라는 서비스가 있다. 2가지 방식의 HTML을 제공하는데 도메인 공통으로 적용되는 방식과 페이지 상단에 코드 블럭을 추가해 개별로 적용하는 방식이다. 후자가 적합했다.
 
@@ -84,7 +84,7 @@ Day One(데이원)이라는 앱을 사용하다가 손쉽게 알찬 일기를 �
 ### Database Layer
 **노션의 데이터베이스**
 
-<img class="cdn-img" id="2023-today-image03.png"/>
+<img class="cdn-img" id="2022-today-image03.png"/>
 
 Notion의 데이터베이스는 실제 DB와 닮았다. 그래서 매우 친숙했다.
 - 컬럼의 속성을 부여할 수 있고 로우를 추가할 수 있다.
@@ -98,15 +98,15 @@ Notion의 데이터베이스는 실제 DB와 닮았다. 그래서 매우 친숙�
 
 **데이터베이스 셋팅**
 
-<img class="cdn-img" id="2023-today-image04.png"/>
+<img class="cdn-img" id="2022-today-image04.png"/>
 
-<img class="cdn-img" id="2023-today-image05.png"/>
+<img class="cdn-img" id="2022-today-image05.png"/>
 
 목표했던 스케줄, 메모, 디데이, 북마크 데이터베이스를 만들고 값을 셋팅해두었다. 기념일은 수식 유형의 컬럼으로 구현했고 북마크는 url 컬럼을 추가하고 oopy의 기능을 이용해 location.href를 구현했다.
 
 **캘린더 데이터베이스화**
 
-<img class="cdn-img" id="2023-today-image06.png"/>
+<img class="cdn-img" id="2022-today-image06.png"/>
 
 템플릿을 사용할 수도 있고 [Calendar2Notion 가이드](https://www.opize.me/d4121d70-1392-4275-a5a9-3cb7998fccac)에서 제시된 6가지 컬럼을 생성하고 간단한 연동 과정을 거치면 바로 해당 데이터베이스와 구글 캘린더가 동기화 된걸 볼 수 있다. 나는 추가로 수식 컬럼을 이용해 문자열 자르기를 해서 원하는 형식으로 값을 사용했다. 그리고 메인 페이지에 링크된 데이터베이스로 추가해주었다.
 
@@ -320,11 +320,11 @@ function getWeather(lat, lon) {
 ### Presentation Layer
 **눈 앞의 타공판**
 
-<img class="cdn-img" id="2023-today-image07.png"/>
+<img class="cdn-img" id="2022-today-image07.png"/>
 
 처음 프로토 타입을 제작했을때 컨셉을 어떻게 잡아야하나 많이 고민했다. 미니멀하게 디자인을 하고 싶었지만 효율을 고려해서 만들게된 프로젝트인데 직관성이 더 중요하다고 생각했다. 위젯들을 잘 표현하려면 대시보드 형태가 유리했고, 흔한 디자인을 벗어나기 위해 포인트가 문제였다.
 
-<img class="cdn-img" id="2023-today-image08.png"/>
+<img class="cdn-img" id="2022-today-image08.png"/>
 
 마침 최근 업무 환경을 타공판을 달았던 것이 눈 앞에 보였고 이를 바로 적용해보았더니 공간감이 마음에 들었고 생각보다 이뻤다.
 
