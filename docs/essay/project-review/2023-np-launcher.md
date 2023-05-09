@@ -37,7 +37,7 @@ intro:
     thumbnail: 2023-NPLauncher-신메인화면.png, 2023-NPLauncher-신설정화면.png
 ---
 
-## 필요한게 없으면 참지를 못 한다
+## 필요한게 없다
 ### PC방 런처를 쓰고 싶다
 <img class="cdn-img" id="2023-NPLauncher-PC방런처.PNG">
 
