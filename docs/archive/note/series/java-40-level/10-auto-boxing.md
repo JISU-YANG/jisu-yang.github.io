@@ -20,27 +20,32 @@ reference:
     content-link: 
 ---
 
-## JAVA 40 LEVEL
-# Lv.10 Auto Boxing
+### 래퍼 클래스 (Wrapper Class)
 
-각 기본 타입에는 래퍼 클래스(Wrapper Class)가 존재한다.
+- 각 기본 타입에는 래퍼 클래스가 있다.
+- 이 클래스는 기본 타입 값을 객체로 만들어준다.
+- 'int'는 'Integer', 'char'는 'Character' 같은 래퍼 클래스가 있다.
 
-ex) int와 Integer, char와 Character
+---
 
->Auto Boxing(기본 타입을 참조 타입으로 변환)과 Auto Unboxing(참조타입을 기본타입으로 변환)은 JDK 1.5부터 자동으로 작동되기 시작했다.
+### 오토 박싱 (Auto Boxing)과 오토 언박싱 (Auto Unboxing)
+
+- JDK 1.5부터 자동으로 동작하기 시작했다.
+- 오토 박싱은 기본 타입을 참조 타입으로 바꿔준다.
+- 오토 언박싱은 참조 타입을 기본 타입으로 바꿔준다.
+- 이 변환은 메모리에서 값 이동을 포함한다.
 
 ```java
 int a1 = 10;
 
-// Outo Boxing
-Integer a2 = a1; // 기본 타입 -> 참조 타입 자동 변환
+// 오토 박싱: 기본 타입 -> 참조 타입
+Integer a2 = a1;
 
-// Outo Unboxing
-int a3 = a2; // 참조 타입 -> 기본 타입 자동 변환
+// 오토 언박싱: 참조 타입 -> 기본 타입
+int a3 = a2;
 
-// Old Style
-int a4 = a2.intValue()
- 
+// 이전 방식
+int a4 = a2.intValue();
 ```
 
-메모리에서 Stack과 Heap 영역에서 값이 이동된다.
+- 위 코드에서, 'a1' 값이 'a2'로 바뀌고, 'a2' 값이 다시 'a3'로 바뀌는 것을 볼 수 있다.
