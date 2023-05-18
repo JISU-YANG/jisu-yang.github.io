@@ -1,0 +1,208 @@
+
+{%- assign title_pages = include.pages
+| where_exp: "item", "item.title != nil" -%}
+
+{%- unless title_pages == empty -%}
+{%- assign unsorted_pages = title_pages
+| where_exp: "item", "item.parent == nil"
+| where_exp: "item", "item.nav_exclude == true" -%}
+{%- assign title_pages_size = title_pages.size -%}
+{%- assign unsorted_pages_percent = unsorted_pages.size
+| times: 100 | divided_by: title_pages_size -%}
+{%- if unsorted_pages_percent > 50 -%}
+{%- assign sorted_pages = "" | split: "" -%}
+{%- for item in title_pages -%}
+{%- if item.nav_exclude != true or item.parent -%}
+{%- assign sorted_pages = sorted_pages | push: item -%}
+{%- endif -%}
+{%- endfor -%}
+{%- assign title_pages = sorted_pages -%}
+{%- endif -%}
+{%- endunless -%}
+
+{%- assign nav_order_pages = title_pages
+| where_exp: "item", "item.nav_order != nil" -%}
+{%- assign title_order_pages = title_pages
+| where_exp: "item", "item.nav_order == nil" -%}
+
+{%- comment -%}
+Divide the arrays of `nav_order_pages` and `title_order_pages` according to
+the type of value.
+
+The first character of the result of `jsonify` is `"` only for strings.
+Grouping by a single character also ensures the number of groups is small.
+{%- endcomment -%}
+
+{%- assign nav_number_pages = "" | split: "" -%}
+{%- assign nav_string_pages = "" | split: "" -%}
+{%- assign nav_order_groups = nav_order_pages
+| group_by_exp: "item", "item.nav_order | jsonify | slice: 0" -%}
+{%- for group in nav_order_groups -%}
+{%- if group.name == '"' -%}
+{%- assign nav_string_pages = group.items -%}
+{%- else -%}
+{%- assign nav_number_pages = nav_number_pages | concat: group.items -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- unless nav_number_pages == empty -%}
+{%- assign nav_number_pages = nav_number_pages | sort: "nav_order" -%}
+{%- endunless -%}
+
+{%- unless nav_string_pages == empty -%}
+{%- if site.nav_sort == 'case_insensitive' -%}
+{%- assign nav_string_pages = nav_string_pages | sort_natural: "nav_order" -%}
+{%- else -%}
+{%- assign nav_string_pages = nav_string_pages | sort: "nav_order" -%}
+{%- endif -%}
+{%- endunless -%}
+
+{%- assign title_number_pages = "" | split: "" -%}
+{%- assign title_string_pages = "" | split: "" -%}
+{%- assign title_order_groups = title_order_pages
+| group_by_exp: "item", "item.title | jsonify | slice: 0" -%}
+{%- for group in title_order_groups -%}
+{%- if group.name == '"' -%}
+{%- assign title_string_pages = group.items -%}
+{%- else -%}
+{%- assign title_number_pages = title_number_pages | concat: group.items -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- unless title_number_pages == empty -%}
+{%- assign title_number_pages = title_number_pages | sort: "title" -%}
+{%- endunless -%}
+
+{%- unless title_string_pages == empty -%}
+{%- if site.nav_sort == 'case_insensitive' -%}
+{%- assign title_string_pages = title_string_pages | sort_natural: "title" -%}
+{%- else -%}
+{%- assign title_string_pages = title_string_pages | sort: "title" -%}
+{%- endif -%}
+{%- endunless -%}
+
+{%- assign pages_list = nav_number_pages | concat: nav_string_pages
+| concat: title_number_pages | concat: title_string_pages -%}
+
+{%- assign first_level_pages = pages_list
+| where_exp: "item", "item.parent == nil" -%}
+{%- assign second_level_pages = pages_list
+| where_exp: "item", "item.parent != nil"
+| where_exp: "item", "item.grand_parent == nil" -%}
+{%- assign third_level_pages = pages_list
+| where_exp: "item", "item.grand_parent != nil" -%}
+
+
+<style>
+    .site-nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .site-footer{
+        border-top: 1px solid #eeebee;
+        bottom: 0;
+    }
+    .nav-series{
+        margin-top: auto;
+        /*padding-top: 2em;*/
+        border-top: 1px solid #eeebee;
+        padding: 2em 2em 0 2em;
+
+    }
+    .nav-series ul{
+        padding-left: 1em;
+    }
+    .nav-series ul li{
+        list-style-type: decimal;
+        font-size: 0.8rem;
+        color: #959396;
+    }
+    #toc{
+        padding-left: 2rem;
+    }
+    .toc-entry{
+        list-style-type: none;
+        font-size: 9pt;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break:break-all;
+        min-height: 1.4rem;
+        line-height: 1.4rem;
+    }
+    .toc-entry > a{
+        color: #959396;
+        text-decoration: none;
+    }
+    .toc-h3{
+        margin-bottom: 1rem;
+    }
+</style>
+
+<div class="side-bar">
+    <div class="site-header">
+        <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+        <a href="#" id="menu-button" class="site-button">
+            <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+        </a>
+    </div>
+    <nav aria-label="Main" id="site-nav" class="site-nav">
+        <div class="ml-6 mb-4 fs-4 fw-700 text-grey-dk-100">{{ page.chapter }}. {{ page.title }}</div>
+        {{ content | toc_only }}
+
+        {% if page.reference != nil %}
+        <div class="nav-series">
+            <ul>
+                {%- for reference in page.reference -%}
+                <li>
+                    {{ reference[1].author }}, {{ reference[1].year }}, {{ reference[1].platform }},
+                    {% if reference[1].content-link != nil %}
+                    <a href="{{ reference[1].content-link }}">{{ reference[1].content }}</a>
+                    {% else %}
+                    {{ reference[1].content }}
+                    {% endif %}
+                </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+        {% endif %}
+    </nav>
+    {%- assign series = second_level_pages | where: "series", page.series -%}
+    {%- assign maxIndex = series.size -%}
+    {%- for note in series -%}
+    {%- if note.title == page.title -%}
+    {%- assign nowIndex = page.chapter -%}
+    {%- endif -%}
+    {%- endfor -%}
+    {%- assign nextIndex = nowIndex | plus:1 -%}
+    {%- assign test = series | where: "chapter", 2 -%}
+
+    <footer class="site-footer">
+        <div id="project-information">
+            <div id="information-parent">
+                <div class="fs-4 fw-700">
+                    <a href="/docs/archive/note/#{{ page.series | downcase | replace: ' ', '-' }}" title="목록" class="text-grey-dk-100">{{ page.series }}</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="project-navigation" class="text-grey-dk-000 fs-2 d-flex flex-justify-between">
+            <div>{{ nowIndex }} / {{ maxIndex }}</div>
+            {%- if nowIndex == maxIndex -%}
+            {%- assign nextPage = series | where: "chapter", 1 -%}
+            {% capture nextUrl %}/docs/archive/note/series/{{ page.series | downcase | replace: " ", "-" }}/01-{{ nextPage[0].title | downcase | replace: " ", "-" }}.html{% endcapture %}
+            {%- else -%}
+            {%- assign nextPage = series | where: "chapter", nextIndex -%}
+
+            {% if nextIndex < 10 %}
+            {% assign nextChapter = "0" | append: nextIndex %}
+            {% else %}
+            {% assign nextChapter = nextIndex %}
+            {% endif %}
+
+            {% capture nextUrl %}/docs/archive/note/series/{{ page.series | downcase | replace: " ", "-" }}/{{ nextChapter }}-{{ nextPage[0].title | downcase | replace: " ", "-" }}.html{% endcapture %}
+            {%- endif -%}
+            <a href="{{ nextUrl }}" class="fw-700 text-grey-dk-100">다음 글</a>
+        </div>
+    </footer>
+</div>

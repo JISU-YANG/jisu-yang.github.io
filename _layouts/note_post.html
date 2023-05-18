@@ -1,0 +1,47 @@
+---
+layout: note_series
+---
+
+<div id="markdown-content">
+    {{ content | inject_anchors }}
+</div>
+
+<script>
+    window.onload = function () {
+        document.querySelectorAll('.cdn-img').forEach(item => {
+            ImageDeliver
+                .id(item.id)
+                .category(PathResource.PROJECT_REVIEW)
+                .file(item.id)
+                .delivery();
+        });
+
+
+        function initImageSlider() {
+            let imageSlideSelectList = document.querySelectorAll('.thumbnail-stack > img');
+            let imageSlideItemList = document.querySelectorAll('img[data-index]');
+
+            imageSlideSelectList.forEach(button => {
+                button.addEventListener('click',function () {
+                    let imageSlideShowItem = document.querySelectorAll('img[data-index="'+button.getAttribute('data-select')+'"]');
+
+                    imageSlideSelectList.forEach(select => {
+                        select.style.borderColor = "#eeebee";
+                    });
+                    button.style.borderColor = "#7253ed";
+
+                    imageSlideItemList.forEach(item => {
+                        item.style.display = "none";
+                    });
+                    imageSlideShowItem.forEach(item => {
+                        item.style.display = "block";
+                    });
+
+                })
+            })
+        }
+
+        initImageSlider();
+
+    }
+</script>
