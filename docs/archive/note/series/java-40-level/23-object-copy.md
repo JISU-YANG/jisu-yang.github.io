@@ -1,0 +1,45 @@
+---
+layout: note_series
+parent: Note
+series: Java 40 Level
+chapter: 23
+title: Object Copy
+toc: true
+reference:
+  1:
+    author: 한동석
+    year: 2019
+    platform: 코리아IT아카데미
+    content: JAVA 단과 과정
+    content-link:
+  2:
+    author: 전민균
+    year: 2019
+    platform: 코리아IT아카데미
+    content: 웹 개발자 양성 과정
+    content-link: 
+---
+
+> 객체 복사에는 deep copy와 shallow copy 두 가지가 있다.
+
+### Deep Copy(깊은 복사)
+객체 안의 값을 새로운 박스 안에 넣는 방법
+
+### Instance의 값을 복사하기 위한 3가지 방법
+- Stack 영역에서 일어나는 방식
+  1. 복사하려는 배열과 같은 크기의 객체를 생성한다.
+  2. 같은 index에 위치한 값을 꺼내와 입력해준다.
+  3. Heap 영역에 있는 배열 안의 값을 Stack 영역으로 꺼내와 Heap의 다른 배열에 넣어줘 연산한다.
+  
+- Heep 영역에서 일어나는 방식
+  1. Object를 통해서 자식의 객체를 Heap 영역에 복사하고 생성된 주소를 넘겨준다.
+  2. 단, 복제가 가능한 클래스만 가능하다.
+  3. 데이터를 가진 클래스들은 clone()을 재정의, 기능만 가진 클래스는 하지 않는다.
+
+- System 메모리에서 사용하는 방식
+  1. 배열에서만 사용하고 배열을 합칠 수 있다.
+
+
+### Shallow Copy(얕은 복사)
+객체는 아규먼트 및 대입 시 주소를 전달한다. (pass by reference)
+주소를 전달하기 때문에 같은 객체를 바라보게 된다.
