@@ -19,37 +19,38 @@ reference:
     content: 웹 개발자 양성 과정
     content-link: 
 ---
+웹에서는 주로 문자열을 다루기 때문에, String 클래스에 대한 이해가 중요하다. 여기서는 주요한 내용들을 살펴본다.
 
-Web에서 받는 텍스트들이 String 타입으로 받아오기 때문에 예외가 많은 클래스인 String을 잘 다룰줄 알아야한다.
+---
 
+### String 클래스의 중요 요소
 
-
-### 중요 요소
-1. String 클래스의 메서드
+1. `String` 클래스의 메서드
 2. 문자열 분리
 3. 문자열 비교
 4. 객체 비교
 
+---
 
-### 특징
-java.lang.String에 속해있으며 다른 클래스에서 extends할 수 없다.
-인스턴스화 (new 예약어를 이용한 호출)을 하지 않아도 인스턴스가 생성된다.
-문자열이 합쳐질때 Concatenation이 발생한다.
-문자형이 조합된 형태이다.
+### String 클래스의 특징
 
-### 선언방법
+`String` 클래스는 `java.lang` 패키지에 속해있다. 이 클래스는 다른 클래스에서 `extends` 할 수 없다. 또한, `new` 예약어를 이용한 인스턴스 생성 없이도 인스턴스가 생성된다. 문자열이 합쳐질 때는 'Concatenation'이 발생한다.
+
+---
+
+### String 선언 방법
+
 ```java
 // 예시 A
 String s1 = "예시A";
 
 // 예시 B
 String s2 = new String("예시B");
- ```
+```
 
-꼭 인스턴스화를 거치지 않아도 되는 이유는 래퍼 클래스(Wrapper Class)들은 오토 박싱/언박싱(Auto Boxing/Unboxing)해서 값을 가져가기 때문이다. 하지만 String은 예외로 다른 고유 영역에 보관된다.
+String은 'Wrapper Class' 중 하나로, 자동으로 Boxing/Unboxing이 이루어져 값을 가져간다. 하지만 String은 다른 고유 영역에 보관되는 예외적인 경우다. 또한, String은 불변(immutable)한 기본타입의 특징을 가지면서 동시에 변형 가능(mutable)한 참조타입의 성질을 따른다.
 
-특징은 immutable한 기본타입이지만 성질은 mutable한 참조타입을 따른다.
+---
 
 ### Concatenate
-문자열과 Object를 연산 후 보이는 그대로 문자열로 만들어준다. ('+' 연산자에서만 작동하고 문자열을 만난 순간 일어난다.)
-
+'Concatenate'는 문자열과 Object를 합쳐서 문자열로 만드는 기능을 말한다. '+' 연산자를 이용할 때 발생하며, 문자열을 만난 순간 바로 일어난다.

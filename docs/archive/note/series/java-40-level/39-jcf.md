@@ -20,23 +20,33 @@ reference:
     content-link: 
 ---
 
-### JCF(Java Collection Framework)의 특징
-1. JAVA의 자료형(Data Type)이다.
-2. 기본 배열을 기반으로 만들었다.
-3. Iterator가 구현되어 있다.
+JCF(Java Collection Framework)는 JAVA의 주요 자료형으로, 기본 배열을 바탕으로 만들어진 데이터 구조다. 이 JCF는 Iterator가 구현되어 있어, 순차적으로 자료를 처리할 수 있다.
+
+---
+
+### JCF의 특징
+
+1. JAVA의 기본 자료형 중 하나다.
+2. 기본 배열을 기반으로 구현되었다.
+3. Iterator가 구현되어 있어, 자료를 순차적으로 처리할 수 있다.
 4. 과거에는 Vector를 사용했었다.
 
-### 인터페이스 별 특징
+---
+
+### JCF 인터페이스의 특징
+
 1. Set
    - 중복과 순서가 없다.
-   - Iterator을 이용한다.
-   - 가장 빠르다.
-2. List
-   - 값이 늘어남에 따라 공간이 늘어난다.
-   - 값이 지워지면 index가 당겨진다.
-3. Map
-   - key, value -> xml, json
-   - 느리다.
-   - key 값을 모르면 사용할 수 없다.
+   - Iterator를 이용해 데이터를 처리한다.
+   - 다른 자료형에 비해 빠르다.
 
-![JCF Image](/Source/JCF.png)
+2. List
+   - 데이터가 추가됨에 따라 자동으로 공간이 늘어난다.
+   - 데이터가 제거되면 인덱스가 자동으로 조정된다.
+
+3. Map
+   - key와 value의 쌍으로 데이터를 저장한다.
+   - 다른 자료형에 비해 속도가 느리다.
+   - key 값을 알아야 데이터를 사용할 수 있다.
+
+![JCF Image](/docs/archive/note/source/JCF.png)

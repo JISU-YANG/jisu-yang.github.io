@@ -19,13 +19,16 @@ reference:
     content: 웹 개발자 양성 과정
     content-link: 
 ---
+String 클래스의 메소드는 인스턴스 형태로 반환되며, 이를 통해 String Pool에 접근할 수 있다. 이때, 접근되는 값은 오버라이딩된 해시코드를 가지게 된다.
 
-1. String 클래스의 메소드는 인스턴스로 반환된다.
-2. 인스턴스를 통해 String Pool에 접근되는 값은 오버라이딩된 해시코드를 가지게된다.
+---
 
-### 형태
+### String 클래스의 형태
+
+다음과 같이 String 인스턴스를 만들 수 있다:
+
 ```java
-class ex(){
+class Ex(){
     String str1 = "A";
     String str2 = new String("a");
     String str3 = "";
@@ -33,8 +36,12 @@ class ex(){
 }
 ```
 
+---
+
 ### 문자열 합치기
-- Concatenation
-  - 문자열과 문자열 사이에 "+" 연산자를 사용해 발생시킨다.
-- Concat
-  - String 클래스의 concat 메소드를 이용한다.
+
+Java에서 문자열을 합치는 방법은 크게 두 가지다:
+
+1. Concatenation: 문자열과 문자열 사이에 "+" 연산자를 사용해 합친다.
+2. Concat: String 클래스의 `concat` 메소드를 이용해 합친다.
+
