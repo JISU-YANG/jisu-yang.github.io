@@ -51,7 +51,7 @@ Java에서는 크게 세 가지 유형의 클래스를 지원한다.
 
 인터페이스 간에 'Extends'를 사용하면, 두 인터페이스의 특성이 합쳐진 새로운 인터페이스를 만들 수 있다.
 
-![Extends Image](/docs/archive/note/source/Extends.png)
+<img class="cdn-img" id="java-40-level-Extends.png">
 
 ---
 

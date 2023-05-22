@@ -1,7 +1,7 @@
 const PathResource = {
     PROFILE: 'assets/',
     PROJECT_REVIEW: 'docs/essay/project-review/resource/',
-
+    NOTE: 'docs/archive/note/resource/'
 }
 class PathBuilder{
     CDN = {

@@ -45,5 +45,5 @@ API 주석은 `/**`로 시작해 `*/`로 끝난다. 여기에는 작성자, 버�
 - 이클립스 > export > VM options
 - -local ko_KR -encoding UTF-8 -charset UTF-8 -docencoding UTF-8
 
-![이클립스 Javadoc VM 옵션 설정](/docs/archive/note/source/Eclipse_Javadoc_VMOption.png)
+<img class="cdn-img" id="java-40-level-Eclipse_Javadoc_VMOption.png">
 

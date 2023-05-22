@@ -49,4 +49,4 @@ JCF(Java Collection Framework)는 JAVA의 주요 자료형으로, 기본 배열�
    - 다른 자료형에 비해 속도가 느리다.
    - key 값을 알아야 데이터를 사용할 수 있다.
 
-![JCF Image](/docs/archive/note/source/JCF.png)
+<img class="cdn-img" id="java-40-level-JCF.png">

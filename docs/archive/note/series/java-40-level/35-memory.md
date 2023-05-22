@@ -70,6 +70,5 @@ reference:
 3. 생성된 객체의 주소는 부모 객체의 주소와 같다.
 4. 클래스에 정의된 공개 메소드만 사용 가능하다.
 
-![Memory Image](/docs/archive/note/source/%EB%A9%94%EB%AA%A8%EB%A6%AC.png)
-
+<img class="cdn-img" id="java-40-level-%EB%A9%94%EB%AA%A8%EB%A6%AC.png">
 
