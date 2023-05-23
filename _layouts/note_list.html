@@ -170,7 +170,27 @@ layout: table_wrappers
         <div id="main-content" class="main-content" role="main">
 
             {%- assign note = second_level_pages | where: "parent", "Note" -%}
-            {%- assign series = note | where_exp: "item", "item.series != ''" -%}
+            {%- assign series = note | where_exp: "item", "item.series != undifined" -%}
+            {%- assign shorts = note | where_exp: "item", "item.series == undifined" -%}
+            <h1 class="text-center">Shorts</h1>
+            {% assign shorts_category = "" | split: "" %}
+            {% for item in shorts %}
+            {% assign shorts_category = shorts_category | push: item.category %}
+            {% endfor %}
+            {% assign shorts_category = shorts_category | uniq %}
+
+            {% for category_item in shorts_category %}
+            <h3 id="{{ category_item | downcase | replace: ' ', '-' }}">{{ category_item }}</h3>
+            <ul>
+                {% assign shorts_item = shorts | where_exp: "item", "item.category == category_item" %}
+                {% for item in shorts_item %}
+                {% capture item_link %}/docs/archive/note/shorts/{{ category_item | downcase | replace: " ", "-" }}/{{ item.title | downcase | replace: " ", "-" }}.html{% endcapture %}
+                <li><a href="{{ item_link }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+
+            {% endfor %}
+
             {% assign series_list = "" | split: "" %}
             {% for item in series %}
             {% assign series_list = series_list | push: item.series %}
@@ -198,6 +218,7 @@ layout: table_wrappers
             </ul>
 
             <hr>
+
             {% endfor %}
 
             {% if site.heading_anchors != false %}
