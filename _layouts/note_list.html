@@ -195,29 +195,37 @@ layout: table_wrappers
             {% for item in series %}
             {% assign series_list = series_list | push: item.series %}
             {% endfor %}
-            {% assign series_list = series_list | uniq %}
+            {% assign series_list = series_list | uniq | reverse %}
 
             <h1 class="text-center">Series</h1>
 
             {% for series_title in series_list %}
-            <h3 id="{{ series_title | downcase | replace: ' ', '-' }}">{{ series_title }}</h3>
-            {%- assign temp_series_item = note | where: "series", series_title | sort: "chapter" -%}
 
-            <ul>
-                {% for temp_item in temp_series_item %}
-                {% if temp_item.chapter < 10 %}
-                {% assign item_chapter = "0" | append: temp_item.chapter %}
-                {% else %}
-                {% assign item_chapter = temp_item.chapter %}
-                {% endif %}
+            <details class="highlight p-5 mt-5" style="border-radius: 6px">
+                <summary class="text-purple-000 fw-500">{{ series_title }}</summary>
 
-                {% capture item_link %}/docs/archive/note/series/{{ series_title | downcase | replace: " ", "-" }}/{{ item_chapter }}-{{ temp_item.title | downcase | replace: " ", "-" }}.html{% endcapture %}
-                <li id="{{ temp_item.title | downcase | replace: ' ', '-' }}"><a href="{{ item_link }}">{{ temp_item.chapter }}. {{ temp_item.title }}</a></li>
-                {% endfor %}
+                {%- assign temp_series_item = note | where: "series", series_title | sort: "chapter" -%}
+                <div markdown="1">
+                    <hr>
 
-            </ul>
+                    <ul>
+                        {% for temp_item in temp_series_item %}
+                        {% if temp_item.chapter < 10 %}
+                        {% assign item_chapter = "0" | append: temp_item.chapter %}
+                        {% else %}
+                        {% assign item_chapter = temp_item.chapter %}
+                        {% endif %}
 
-            <hr>
+                        {% capture item_link %}/docs/archive/note/series/{{ series_title | downcase | replace: " ", "-" }}/{{ item_chapter }}-{{ temp_item.title | downcase | replace: " ", "-" }}.html{% endcapture %}
+                        <li id="{{ temp_item.title | downcase | replace: ' ', '-' }}"><a href="{{ item_link }}">{{ temp_item.chapter }}. {{ temp_item.title }}</a></li>
+                        {% endfor %}
+
+                    </ul>
+
+                </div>
+            </details>
+
+
 
             {% endfor %}
 
