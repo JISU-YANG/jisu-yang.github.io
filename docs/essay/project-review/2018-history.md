@@ -69,8 +69,8 @@ DB와 서버 구축 능력이 부족한 우리 팀에게 큰 도움이 되었다
 전문적인 지식이 없는 상태라 시스템 자체를 변경할 수는 없었고 급한대로 대처하는 형태로 접근했다.
 가령, 글 작성시에 필수 값이지만 사용하지 않는 본문과 공개옵션을 숨기고 코드로 처리했다.
 
-<details class="highlight p-5 mt-5" style="border-radius: 6px">
-<summary class="text-purple-000 fw-500">필수 값인 본문 내용을 임의로 기본값 설정하기</summary>
+<details class="my-5">
+<summary class="pb-5 text-purple-000 fw-500">필수 값인 본문 내용을 임의로 기본값 설정하기</summary>
 <div markdown="1">
 
 ```html
@@ -80,8 +80,8 @@ DB와 서버 구축 능력이 부족한 우리 팀에게 큰 도움이 되었다
 </div>
 </details>
 
-<details class="highlight p-5 mt-5" style="border-radius: 6px">
-<summary class="text-purple-000 fw-500">공개, 비공개 선택 상자 자동으로 체크하기</summary>
+<details class="my-5">
+<summary class="pb-5 text-purple-000 fw-500">공개, 비공개 선택 상자 자동으로 체크하기</summary>
 <div markdown="1">
 
 ```javascript
@@ -105,8 +105,8 @@ document.onclick = function(e) {
 ### 기본적인 개발에 대해 이해하기
 이 CMS는 PHP 7.0 이상을 지원한다. 하지만 프레임워크의 문법을 주로 사용 했기 때문에 구글링으로 찾기 힘든 정보도 많아 힘들었다. 대신 [잘 활성화 되어있는 커뮤니티](https://xetown.com/)가 있어 도움을 많이 받았다.
 
-<details class="highlight p-5 mt-5" style="border-radius: 6px">
-<summary class="text-purple-000 fw-500">사용자 변수 가져오기</summary>
+<details class="my-5">
+<summary class="pb-5 text-purple-000 fw-500">사용자 변수 가져오기</summary>
 <div markdown="1">
 
 ```php
@@ -116,8 +116,8 @@ document.onclick = function(e) {
 </div>
 </details>>
 
-<details class="highlight p-5 mt-5" style="border-radius: 6px">
-<summary class="text-purple-000 fw-500">조건문 사용하기</summary>
+<details class="my-5">
+<summary class="pb-5 text-purple-000 fw-500">조건문 사용하기</summary>
 <div markdown="1">
 
 ```php
@@ -130,8 +130,8 @@ document.onclick = function(e) {
 </div>
 </details>
 
-<details class="highlight p-5 mt-5" style="border-radius: 6px">
-<summary class="text-purple-000 fw-500">상대적인 날짜 구하기</summary>
+<details class="my-5">
+<summary class="pb-5 text-purple-000 fw-500">상대적인 날짜 구하기</summary>
 <div markdown="1">
 ```php
 // 전후 날짜 변수 초기화
@@ -141,8 +141,8 @@ document.onclick = function(e) {
 </div>
 </details>
 
-<details class="highlight p-5 mt-5" style="border-radius: 6px">
-<summary class="text-purple-000 fw-500">문자열 자르기</summary>
+<details class="my-5">
+<summary class="pb-5 text-purple-000 fw-500">문자열 자르기</summary>
 <div markdown="1">
 ```php
 // 날짜 표기
@@ -155,8 +155,8 @@ document.onclick = function(e) {
 </div>
 </details>
 
-<details class="highlight p-5 mt-5" style="border-radius: 6px">
-<summary class="text-purple-000 fw-500">모듈 호출하기</summary>
+<details class="my-5">
+<summary class="pb-5 text-purple-000 fw-500">모듈 호출하기</summary>
 <div markdown="1">
 
 ```html
