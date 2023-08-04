@@ -78,7 +78,7 @@ DB와 서버 구축 능력이 부족한 우리 팀에게 큰 도움이 되었다
 ```
 
 </div>
-<details>
+</details>
 
 <details class="highlight p-5 mt-5" style="border-radius: 6px">
 <summary class="text-purple-000 fw-500">공개, 비공개 선택 상자 자동으로 체크하기</summary>
@@ -99,7 +99,7 @@ document.onclick = function(e) {
 ```
 
 </div>
-<details>
+</details>
 
 ## 배운 점
 ### 기본적인 개발에 대해 이해하기
@@ -114,7 +114,7 @@ document.onclick = function(e) {
 ```
 
 </div>
-<details>
+</details>>
 
 <details class="highlight p-5 mt-5" style="border-radius: 6px">
 <summary class="text-purple-000 fw-500">조건문 사용하기</summary>
@@ -128,7 +128,7 @@ document.onclick = function(e) {
 ```
 
 </div>
-<details>
+</details>
 
 <details class="highlight p-5 mt-5" style="border-radius: 6px">
 <summary class="text-purple-000 fw-500">상대적인 날짜 구하기</summary>
@@ -139,7 +139,7 @@ document.onclick = function(e) {
 {@ $tomorrow = strtotime("+1 day")}
 ```
 </div>
-<details>
+</details>
 
 <details class="highlight p-5 mt-5" style="border-radius: 6px">
 <summary class="text-purple-000 fw-500">문자열 자르기</summary>
@@ -153,7 +153,7 @@ document.onclick = function(e) {
 {substr($oDocument->getExtraEidValue('날짜 변수'),8,2)}
 ```
 </div>
-<details>
+</details>
 
 <details class="highlight p-5 mt-5" style="border-radius: 6px">
 <summary class="text-purple-000 fw-500">모듈 호출하기</summary>
@@ -169,7 +169,7 @@ document.onclick = function(e) {
 ```
 
 </div>
-<details>
+</details>
 
 ### 반복되는 공통 코드를 분리하기
 Header나 Footer, GNB 같은 경우 간단한 수정이 있어도 코드를 포함하는 모든 파일의 직접 코드를 수정을 해야만 했다.
