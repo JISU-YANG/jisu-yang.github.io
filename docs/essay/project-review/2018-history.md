@@ -21,7 +21,7 @@ summary: # 프로젝트 개요
         day: 9개월
     people: # 개발 인원 @number: 인원 수 @script: 비고
         number: 2명
-        script: 팀장, 개발인원 1명
+        script: 팀장
 intro:
     tech_stack: # 기술 스택 key(index):value(script)
         language: PHP, JavaScript, HTML/CSS
@@ -46,79 +46,44 @@ intro:
     thumbnail: 2018-History-Image.gif, 2018-History-Image2.png
 ---
 
+## 어려움과 극복
+### 개발할 서비스를 기획하기
+가계부와 캘린더를 결합한 새로운 서비스를 기획했다.
+참고 모델이 없기 때문에, 기존 서비스의 문제점을 개선하는 방향으로 고민했다.
+기획에서 개발로 이어지는 과정이 낯설어서 어려움도 많았다.
+사용되는 서비스가 되기 위해 최대한 간단하고, 쉽고, 유용해야한다는 규칙을 정했다.
+자연스러운 화면 흐름과 가공한 데이터를 보상으로 제공하는 것에 집중했다.
 
-## Keep
-### jQuery를 잘 활용한 것 같다.
-JavaScript를 자유롭게 구사할 수 있었다면 덜 고생하고 더 깔끔하게 코드가 구현될 수 있었던 것은 사실이지만, 그 당시 나는 JavaScript를 잘 알지 못했고, 같은 기능을 구현할 수 있는 방법 중에 더 직관적인 jQuery를 선택했다.
+### 기획에서 개발로 넘어가기
+서비스라는 것이 어떤 과정을 거쳐 기획에서 개발로 반영되는지 알지 못 했다.
+그래서 기획안에 어떤 것 작성해야하는지 어떤 부분이 중요하고 어떤 방식으로 정리되어 있어야하는지 몰랐다.
+그래서 추상적으로 이런 기능이 있었으면 좋겠다. 전달받으면 하나 반영하고 마음에 들지 않는다. 하면 다시 고치는 식이었다.
+그런 사항들을 구두상으로 전달 받는 경우가 많아 정확하게 파악하지 못하는 경우가 빈번했다.
+더디기도 하고 업무량도 많았고 제일 큰 고충은 완성된 그림을 떠올리며 기능들을 고려할 수 없기 때문에 새로 엎는 일이었다.
 
-- Element의 값 입력
-```javascript
-// 버튼으로 달력의 날짜를 컨트롤하기 위해 값을 입력하는 부분
-$("#dateButtonTomorrow").click(function() {
-    var text = "{date('Y-m-d',$tomorrow)}";
-    $("#date").val(text);
-});
-```
-- 더 다양한 함수 사용
-```javascript
-// 자연스러운 애니메이션 전환을 위한 delay(), switchClass()
-$(function() {
-	$("#When-SB").on("click", function() {
-    	$("svg.When-LB").delay(100).switchClass("When-LB", "When-LB-Off", 200, "easeInOutCubic");
-	});
-});
-```
+### CMS를 활용하여 구축하기
+Rhymix라는 CMS(컨텐츠 관리 시스템)를 활용해 프로젝트를 진행했다.
+이 CMS는 기본적으로 회원 관리, 게시판 등의 기능을 제공하고 사용자 정의 변수를 추가할 수 있어서, 
+DB와 서버 구축 능력이 부족한 우리 팀에게 큰 도움이 되었다.
+대신 기존의 용도로 사용하는 것이 아니다 보니 몇 가지 처리가 필요했다. 
+전문적인 지식이 없는 상태라 시스템 자체를 변경할 수는 없었고 급한대로 대처하는 형태로 접근했다.
+가령, 글 작성시에 필수 값이지만 사용하지 않는 본문과 공개옵션을 숨기고 코드로 처리했다.
 
----
+<details class="highlight p-5 mt-5" style="border-radius: 6px">
+<summary class="text-purple-000 fw-500">필수 값인 본문 내용을 임의로 기본값 설정하기</summary>
+<div markdown="1">
 
-### Rhymix 시스템에 대한 이해가 늘었다.
-이 CMS는 PHP 7.0 이상을 지원한다. 나는 쉽게 레퍼런스를 얻을 수 있는 특화된 문법을 사용했는데, 기능에 대해 명확하게 알지 못한 채 외부 자료에 의존한 채로 값을 조절해 가며 이해하느라 시간이 많이 소요되었다.
-- 사용자 변수 가져오기
-```html
-{$oDocument->getExtraEidValue("M1_1")}
-```
-- 조건문 사용하기
-```php
-<!--@if($oDocument->getExtraEidValue("M2")=='만남')-->
-<!--@else if($oDocument->getExtraEidValue("M2")=='음식')-->
-<!--@else-->
-<!--@end-->
-```
-- shrtotime() 함수 사용하기
-```php
-// 전후 날짜 변수 초기화
-{@ $yesterday = strtotime("-1 day")}
-{@ $tomorrow = strtotime("+1 day")}
-```
-- substr() 함수 사용하기
-```php
-// 날짜 표기
-{substr($oDocument->getExtraEidValue('D1'),2,2)}
-.
-{substr($oDocument->getExtraEidValue('D1'),5,2)}
-.
-{substr($oDocument->getExtraEidValue('D1'),8,2)}
-```
-- 모듈 호출하기
-```html
-<!-- 작성 -->
-<a class="fas fa-pencil-alt" href="{getUrl('act','dispBoardWrite','document_srl',$oDocument->document_srl,'comment_srl','','yves','')}"></a>
-<!-- 북마크 -->
-<a href="#" class="fas fa-star" onclick="doCallModuleAction('member','procMemberScrapDocument','{$oDocument->document_srl}');return false;"></a>
-<!-- 삭제 -->
-<a class="fas fa-trash-alt" href="{getUrl('act','dispBoardDelete','document_srl',$oDocument->document_srl,'comment_srl','','yves','')}"></a>
-```
-
----
-
-## Problem & Try
-### 1. 게시판의 구조 변형
-아무래도 전문적인 지식이 부족한 상태라 원래 시스템을 건드리는 것은 위험하다고 생각이 들어서 비효율적이지만 대처를 하는 형태로 접근을 했다. 주로 표시하는 부분을 없앤 후 보이지 않게 그에 대해 기본값을 설정해주었다.
-- 본문 값이 필수인 부분을 임의 값으로 대체하여 저장하기
 ```html
 <input type="hidden" name="content"  value=".">
 ```
-- 공개, 비공개 선택 상자 자동으로 체크하기
+
+</div>
+<details>
+
+<details class="highlight p-5 mt-5" style="border-radius: 6px">
+<summary class="text-purple-000 fw-500">공개, 비공개 선택 상자 자동으로 체크하기</summary>
+<div markdown="1">
+
 ```javascript
 document.onclick = function(e) {
   if (!e) e = window.event;
@@ -133,36 +98,134 @@ document.onclick = function(e) {
 }
 ```
 
----
+</div>
+<details>
 
-### 2. 구조적 문제
-MVC에 대한 개념, Framework 에 대한 정보가 없어서 화면에 대한 수정에 상당히 애를 먹었다. 예를 들어, Header나 Footer에 대한 간단한 수정이 있어도 모든 파일의 코드를 수정을 해야만 했다.
+## 배운 점
+### 기본적인 개발에 대해 이해하기
+이 CMS는 PHP 7.0 이상을 지원한다. 하지만 프레임워크의 문법을 주로 사용 했기 때문에 구글링으로 찾기 힘든 정보도 많아 힘들었다. 대신 [잘 활성화 되어있는 커뮤니티](https://xetown.com/)가 있어 도움을 많이 받았다.
 
-중반부에 이 부분에 대한 해결 방법이 ~~절대~~ 있을 거라고 믿고 검색과 삽질의 반복을 통해 include 태그를 사용할 수 있게 되었다. 그래서 한 가지 주요한 책임 단위로 나누어, 최종적인 코드에는 include의 조합이 작성되었고, 재사용성을 높일 수 있었다.
-
-```html
-<include target="/a.html" />
-```
-
----
-
-### 3. QA 요구사항
-지인들에게 QA를 부탁한 후 가장 많이 이야기를 들었던 것이 이미 작성했던 약속에 대해 수정을 할 때 날짜가 자동으로 입력이 되어있지 않은 부분을 꼽았다. 인지하고 있었지만 text가 아닌 date는 조금 까다로웠다. 정보를 찾기가 쉽지 않아 우선순위에서 미루었지만, QA 이후 해결하기로 마음먹고 다른 형태의 레퍼런스를 참고하여 개선할 수 있었다.
-- 약속 수정 시 기존 값 불러오기
+<details class="highlight p-5 mt-5" style="border-radius: 6px">
+<summary class="text-purple-000 fw-500">사용자 변수 가져오기</summary>
+<div markdown="1">
 
 ```php
-<div class="writeInputBasic">
-	<input id="date" type="text" name="extra_vars1" id="when" cond="!$oDocument->getExtraEidValueHTML('when')">
-	<input id="date" type="text" name="extra_vars1" id="when" value="{zdate(str_replace('-','',$oDocument->getExtraEidValue("when")), 'Y-m-d')}" cond="$oDocument->getExtraEidValueHTML('when')">
+{$oDocument->getExtraEidValue("변수 이름")}
+```
+
 </div>
+<details>
+
+<details class="highlight p-5 mt-5" style="border-radius: 6px">
+<summary class="text-purple-000 fw-500">조건문 사용하기</summary>
+<div markdown="1">
+
+```php
+<!--@if($oDocument->getExtraEidValue("변수 이름")=='값 1')-->
+<!--@else if($oDocument->getExtraEidValue("변수 이름")=='값 2')-->
+<!--@else-->
+<!--@end-->
+```
+
+</div>
+<details>
+
+<details class="highlight p-5 mt-5" style="border-radius: 6px">
+<summary class="text-purple-000 fw-500">상대적인 날짜 구하기</summary>
+<div markdown="1">
+```php
+// 전후 날짜 변수 초기화
+{@ $yesterday = strtotime("-1 day")}
+{@ $tomorrow = strtotime("+1 day")}
+```
+</div>
+<details>
+
+<details class="highlight p-5 mt-5" style="border-radius: 6px">
+<summary class="text-purple-000 fw-500">문자열 자르기</summary>
+<div markdown="1">
+```php
+// 날짜 표기
+{substr($oDocument->getExtraEidValue('날짜 변수'),2,2)}
+.
+{substr($oDocument->getExtraEidValue('날짜 변수'),5,2)}
+.
+{substr($oDocument->getExtraEidValue('날짜 변수'),8,2)}
+```
+</div>
+<details>
+
+<details class="highlight p-5 mt-5" style="border-radius: 6px">
+<summary class="text-purple-000 fw-500">모듈 호출하기</summary>
+<div markdown="1">
+
+```html
+<!-- 작성 -->
+<a class="fas fa-pencil-alt" href="{getUrl('act','dispBoardWrite','document_srl',$oDocument->document_srl,'comment_srl','','yves','')}"></a>
+<!-- 북마크 -->
+<a href="#" class="fas fa-star" onclick="doCallModuleAction('member','procMemberScrapDocument','{$oDocument->document_srl}');return false;"></a>
+<!-- 삭제 -->
+<a class="fas fa-trash-alt" href="{getUrl('act','dispBoardDelete','document_srl',$oDocument->document_srl,'comment_srl','','yves','')}"></a>
+```
+
+</div>
+<details>
+
+### 반복되는 공통 코드를 분리하기
+Header나 Footer, GNB 같은 경우 간단한 수정이 있어도 코드를 포함하는 모든 파일의 직접 코드를 수정을 해야만 했다.
+수정이 잦다보니 여간 과정이 번거로운게 아니였다. 놓치는 파일도 있었다. 
+프로젝트 중반부에 도저히 개발이라는 것이 효율적이기 위해 생긴 것인데 이렇게 작업할리가 없다는 생각이 들었다.
+~~절대로~~ 이 부분에 대한 해결 방법이 있을 거라고 믿고 검색과 삽질의 반복을 통해 include 태그를 사용할 수 있다는 것을 알게 되었다.
+
+```html
+<include target="/header.html" />
 ```
 
 ---
+당신의 프로젝트에서 두 가지 주요 문제였던 약속 수정 기능의 개선과 사용자 경험 향상을 성공적으로 이루었습니다.
+
+날짜 형식의 불일치 문제를 해결하여 약속 수정 기능을 개선했습니다. 이를 통해 등록된 약속의 날짜를 정확하게 불러올 수 있게 되었습니다.
+
+jQuery를 사용해 웹페이지에 애니메이션 효과를 추가함으로써, 사용자 경험이 향상되었습니다. 이로 인해 웹페이지는 더 부드럽고 동적인 느낌을 제공하게 되었습니다.
+
+이 두 가지 성과는 프로젝트의 품질 향상에 중요한 역할을 하였으며, 앞으로의 개발에서도 활용할 수 있는
+
+당신의 프로젝트에서 두 가지 주요 문제였던 약속 수정 기능의 개선과 사용자 경험 향상을 성공적으로 이루었습니다.
+
+## 성과 및 결과
+### 사용자 의견 반영하기
+개발 도중 너무 시간이 지체되는 부분들은 우선순위를 뒤로 미루거나 보류하고 넘어갔다. 개발이 완성된 이후, 지인분들에게도 부탁을 드려 따로 QA 기간을 가졌다.
+가장 많이 나왔던 의견 두 가지가 기억에 남는다.
+
+1. 이미 등록했던 약속을 수정을 할 때 기존의 날짜를 불러오지 않던 부분은 날짜 타입이 일치하지 않아 초기 개발 단계에서 해결하지 못했는데 원인을 찾아내 편의성을 개선할 수 있었다.
+    ```php
+    <div class="writeInputBasic">
+      <input id="date" type="text" name="extra_vars1" id="when" cond="!$oDocument->getExtraEidValueHTML('when')">
+      <input id="date" type="text" name="extra_vars1" id="when" value="{zdate(str_replace('-','',$oDocument->getExtraEidValue("when")), 'Y-m-d')}" cond="$oDocument->getExtraEidValueHTML('when')">
+    </div>
+    ```
+2. 정적인 웹페이지로 느껴지는 점은 jQuery를 사용해 웹 페이지에 애니메이션 효과를 추가함으로서, 더 부드럽고 동적인 느낌을 제공해 사용자 경험을 향상할 수 있었다.
+    ```javascript
+    // 자연스러운 애니메이션 전환을 위한 delay(), switchClass()
+    $(function() {
+        $("#When-SB").on("click", function() {
+            $("svg.When-LB").delay(100).switchClass("When-LB", "When-LB-Off", 200, "easeInOutCubic");
+        });
+    });
+    ```
+
+### 효율성 향상
+작업한 파일을 매번 FTP 클라이언트를 통해 서버에 올려 테스트하는 번거로운 프로세스를 진행하고 있었다.
+하지만 에디터에서 FTP 접속을 하고 바로 파일에 접근해 코드를 수정하는 방법을 발견하여 작업 시간을 단축할 수 있게 되었다.
+
+### 투자 실패
+서비스의 프로토 타입이 개발이 된 후로 투자를 목표로 관계자분과 미팅을 거쳐 요구사항을 전달받아 추가로 반영하였다.
+하지만 최종 미팅에서 결정권이 있는 담당자 분과 이해 관계가 맞지 않아 결국 승인을 받지 못해 아쉽게도 프로젝트는 중단되었다.
 
 ## 마치며
-사실, 할 수 있는 최선을 다했지만, 능력적인 한계에 부딪힌 부분이 많은 프로젝트였다.
-온전히 Architecture를 설계할 수 있는 자유로움이 없기 때문에 CMS에 의존적일 수 밖에 없었고, 
-추가로 프로그래밍 언어에 대한 지식이 얕아서 시간 대비 고생을 많이 했다.
-
-이번 프로젝트를 진행하면서 코드 한 줄을 해결하지 못해 라디오와 함께 밤을 새우면서도 해결한 순간 느낀 그 도파민을 잊을 수가 없다.
-그 기억이 나를 개발자의 길로 향하게 한 불쏘시개🔥가 되었다.
+개발자인 분이 팀원으로 활동하기로 해서 시작할 수 있었던 프로젝트였는데, 
+사정으로 인해 무산되고서 많은 고민과 회의 끝에 결국 내가 그 역할을 맡기로 했었다.
+막상 겪어보니 언어와 로직의 개발적 사고가 생각보다 더 진입장벽이 높았다.
+최선을 다 했음에도, 원하는 기획을 완전하게 구현할 수 없는 한계도 아쉬웠다.
+코드 한 줄을 해결하지 못해 라디오와 함께 밤을 새우면서도 해결이 된 순간 느꼈던 그 도파민이 잊혀지지가 않는다.
+이 기억이 본격적인 개발자의 길로 향하게 한 불쏘시개🔥가 되었다.
