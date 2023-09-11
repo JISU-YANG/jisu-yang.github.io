@@ -35,14 +35,20 @@ intro:
       script: 서비스 기획 및 개발 문서 작성, 업무 분담 및 일정 조율
       contribution: 80
     2:
-      script: Native iOS 앱 환경에서 데이터 관리, 비동기 통신, API 적용 등 전체 기능 구현
-      contribution: 100
+      script: 도메인 및 API 서버 구현
+      contribution: 10
     3:
-      script: SwiftUI 언어로 화면 구성 및 흐름 제어
+      script: Native iOS 앱 환경에서 데이터 관리, 비동기 통신, API 적용 등 기능 구현
       contribution: 100
     4:
+      script: SwiftUI 언어로 화면 구성 및 흐름 제어
+      contribution: 100
+    5:
       script: 애플 개발자 프로그램 및 앱스토어 심사
       contribution: 100
+    6:
+      script: 서비스 브랜딩 및 마케팅
+      contribution: 20
   thumbnail: 2021-alohacoupon-thumb01.png, 2021-alohacoupon-thumb02.png, 2021-alohacoupon-thumb03.png
 ---
 
