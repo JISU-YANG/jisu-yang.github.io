@@ -4,7 +4,7 @@ layout: project_review
 title: 북마크 런처 프로그램
 parent: 프로젝트 회고록
 grand_parent: Essay
-nav_order: 12
+nav_order: 1
 nav_exclude: true
 toc: true
 
@@ -14,8 +14,8 @@ summary: # 프로젝트 개요
         subject: 북마크 런처 프로그램
     platform: # 서비스 플랫폼 @environment: 지원환경 @demo: 데모 url @github: 깃헙 url, @value: default -> n
         environment: 윈도우 응용 프로그램  
-        demo: https://github.com/JISU-YANG/NP-Launcher/releases/tag/v1.0.0
-        github: https://github.com/JISU-YANG/NP-Launcher/tree/common
+        demo: https://github.com/JISU-YANG/NP-Launcher/releases/tag/v1.0
+        github: https://github.com/JISU-YANG/NP-Launcher/tree/master
     period: # 개발 기간 @date: 범위 @day: 기간
         date: 23.03.07. ~ 23.03.12.
         day: 일주일
@@ -32,7 +32,7 @@ intro:
         ide: IntelliJ
     role: 
         1:
-            script: 전체(기획, UX/UI, 풀스택 개발, QA)
+            script: 프로젝트 기획, UX/UI 디자인, 풀스택 개발, QA 및 테스트
             contribution: 100
     thumbnail: 2023-NPLauncher-신메인화면.png, 2023-NPLauncher-신설정화면.png
 ---
