@@ -55,6 +55,10 @@ project_list:
     years: 2023
     title: "NP-Launcher"
     summary: "북마크 런처 프로그램"
+  13:
+    years: 2024
+    title: "NP-Launcher v1.1"
+    summary: "북마크 런처 프로그램"
 ---
 
 {% for project in page.project_list reversed %}
