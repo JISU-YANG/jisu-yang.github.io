@@ -34,7 +34,7 @@ intro:
         1:
             script: 프로젝트 기획, UX/UI 디자인, 풀스택 개발, QA 및 테스트
             contribution: 100
-    thumbnail: 2023-NPLauncher-신메인화면.png, 2023-NPLauncher-신설정화면.png
+    thumbnail: 2024-NPLauncher-메인화면.png, 2024-NPLauncher-설정화면.png
 ---
 
 ## 어려움과 극복
