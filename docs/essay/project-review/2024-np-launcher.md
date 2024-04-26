@@ -1,7 +1,7 @@
 ---
 # 페이지 셋팅
 layout: project_review
-title: 북마크 런처 프로그램
+title: 북마크 런처 프로그램 v1.1
 parent: 프로젝트 회고록
 grand_parent: Essay
 nav_order: 1
