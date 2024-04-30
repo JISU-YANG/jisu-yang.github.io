@@ -26,6 +26,7 @@ toc: true
 
 ### GitHub
 - [사용중인 GitHub 계정 변경하는 방법](https://www.lainyzine.com/ko/article/how-to-change-the-github-account-used-by-the-development-environment/)
+- [이미 push한 commit message 수정하기](https://velog.io/@dev_bomdong/Git-%EC%9D%B4%EB%AF%B8-push%ED%95%9C-commit-message-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0)
 
 ---
 
