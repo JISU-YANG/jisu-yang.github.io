@@ -20,7 +20,7 @@ nav_order: 1
     <div style="text-align: right; min-width: 320px">
         <h2>사색하는 개발자, 양지수 입니다.</h2>
         <h3>주니어 백엔드 개발자</h3>
-        <h4 class="text-grey-dk-000" style="padding-top: 80px">Last updated: 2023.03.30</h4>
+        <h4 class="text-grey-dk-000" style="padding-top: 80px">Last updated: 2024.05.29</h4>
     </div>
 </div>
 
@@ -76,11 +76,11 @@ nav_order: 1
 \: SPACE
 {: .text-grey-dk-000 .fs-2 .fw-500 .d-inline-block }
 
-[회고](h)
+[회고](https://jisulog.com/docs/essay/project-review/2021-ego-space)
 {: .float-right .fs-2 .fw-500 .d-inline-block .mt-6 .mb-0 }
-[GitHub](h)
+[GitHub](https://github.com/egocrew/SPACE)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
-[Demo](h)
+[Demo](https://space.ego.so/)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
 
 
@@ -95,11 +95,11 @@ nav_order: 1
 \: Hyper
 {: .text-grey-dk-000 .fs-2 .fw-500 .d-inline-block }
 
-[회고](h)
+[회고](https://jisulog.com/docs/essay/project-review/2020-hyper)
 {: .float-right .fs-2 .fw-500 .d-inline-block .mt-6 .mb-0 }
-[GitHub](h)
+[GitHub](https://github.com/JISU-YANG/2020_Hyper)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
-[Demo](h)
+[Demo](https://hyper.egoist.im/)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
 
 - ASCII 코드 기반의 키 값 제한으로 사용자 경험을 개선하고, 키 중복 문제를 해결했습니다.
@@ -114,9 +114,9 @@ nav_order: 1
 \: Darling
 {: .text-grey-dk-000 .fs-2 .fw-500 .d-inline-block }
 
-[회고](h)
+[회고](https://jisulog.com/docs/essay/project-review/2021-darling)
 {: .float-right .fs-2 .fw-500 .d-inline-block .mt-6 .mb-0 }
-[Demo](h)
+[Demo](https://apps.apple.com/om/app/%EB%8B%AC%EB%A7%81/id1583530907)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
 
 - 이미지 캐싱, 인터렉션의 아쉬움을 외부 라이브러리를 사용하여 개선했습니다.
@@ -128,9 +128,9 @@ nav_order: 1
 \: Aloha Coupon
 {: .text-grey-dk-000 .fs-2 .fw-500 .d-inline-block }
 
-[회고](h)
+[회고](https://jisulog.com/docs/essay/project-review/2021-aloha-coupon)
 {: .float-right .fs-2 .fw-500 .d-inline-block .mt-6 .mb-0 }
-[Demo](h)
+[Demo](https://apps.apple.com/us/app/%EC%95%8C%EB%A1%9C%ED%95%98-%EC%BF%A0%ED%8F%B0/id1548121101)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
 
 - Swift로 비동기 통신과 API를 사용하여 데이터를 관리해보았습니다.
