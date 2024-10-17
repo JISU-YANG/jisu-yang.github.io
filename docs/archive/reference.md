@@ -6,34 +6,21 @@ nav_order: 3
 toc: true
 
 ---
-# Reference Archive
-<details class="highlight p-5 mt-5" style="border-radius: 6px">
-<summary class="text-purple-000 fw-500">레퍼런스 수집 기준</summary>
-<div markdown="1">
----
-1. 적합한 상황
-2. 정확한 정보
-3. 상세한 설명
-</div>
-</details>
 
 ---
-
+## Development
 ### IntelliJ
 - [Mac 세로편집모드 단축키](https://islet4you.tistory.com/entry/Intellij-%EC%84%B8%EB%A1%9C%ED%8E%B8%EC%A7%91%EB%AA%A8%EB%93%9C-%EC%A0%84%ED%99%98-%EB%8B%A8%EC%B6%95%ED%82%A4)
 
----
 
 ### GitHub
 - [사용중인 GitHub 계정 변경하는 방법](https://www.lainyzine.com/ko/article/how-to-change-the-github-account-used-by-the-development-environment/)
 - [이미 push한 commit message 수정하기](https://velog.io/@dev_bomdong/Git-%EC%9D%B4%EB%AF%B8-push%ED%95%9C-commit-message-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0)
 
----
 
 ### Javascript
 - [data 속성을 셀렉터 그룹으로 지정하기](https://stackoverflow.com/a/7084588)
 
----
 
 ### HTML/CSS, Markdown
 - [HTML 리스트 종류 및 하위 리스트](http://lecturewebprogramming.blogspot.com/2012/09/html_30.html)
@@ -46,6 +33,8 @@ toc: true
 - [이미지 사이즈 맞추기](https://inpa.tistory.com/entry/CSS-%F0%9F%93%9A-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%82%AC%EC%9D%B4%EC%A6%88-%EB%B9%84%EC%9C%A8-%EB%A7%9E%EC%B6%94%EB%8A%94-3%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95-object-fit-background-size-position)
 
 ---
+
+## Project
 
 <details class="highlight p-5 mt-5" style="border-radius: 6px">
 <summary class="text-purple-000 fw-500">iOS 앱 개발</summary>
@@ -74,7 +63,6 @@ toc: true
 </div>
 </details>
 
----
 
 <details class="highlight p-5 mt-5" style="border-radius: 6px">
 <summary class="text-purple-000 fw-500">GitHub Pages</summary>
@@ -90,7 +78,6 @@ toc: true
 </div>
 </details>
 
----
 
 <details class="highlight p-5 mt-5" style="border-radius: 6px">
 <summary class="text-purple-000 fw-500">Notion API</summary>
