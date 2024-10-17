@@ -167,21 +167,21 @@ Grouping by a single character also ensures the number of groups is small.
         </div>
         {% endif %}
     </nav>
-    {%- assign series = second_level_pages | where: "series", page.series -%}
-    {%- assign maxIndex = series.size -%}
-    {%- for note in series -%}
-    {%- if note.title == page.title -%}
+    {%- assign study = second_level_pages | where: "study", page.study -%}
+    {%- assign maxIndex = study.size -%}
+    {%- for learning-notes in study -%}
+    {%- if learning-notes.title == page.title -%}
     {%- assign nowIndex = page.chapter -%}
     {%- endif -%}
     {%- endfor -%}
     {%- assign nextIndex = nowIndex | plus:1 -%}
-    {%- assign test = series | where: "chapter", 2 -%}
+    {%- assign test = study | where: "chapter", 2 -%}
 
     <footer class="site-footer">
         <div id="project-information">
             <div id="information-parent">
                 <div class="fs-4 fw-700">
-                    <a href="/docs/archive/note/#{{ page.series | downcase | replace: ' ', '-' }}" title="목록" class="text-grey-dk-100">{{ page.series }}</a>
+                    <a href="/docs/archive/learning-notes/#{{ page.study | downcase | replace: ' ', '-' }}" title="목록" class="text-grey-dk-100">{{ page.study }}</a>
                 </div>
             </div>
         </div>
@@ -189,10 +189,10 @@ Grouping by a single character also ensures the number of groups is small.
         <div id="project-navigation" class="text-grey-dk-000 fs-2 d-flex flex-justify-between">
             <div>{{ nowIndex }} / {{ maxIndex }}</div>
             {%- if nowIndex == maxIndex -%}
-            {%- assign nextPage = series | where: "chapter", 1 -%}
-            {% capture nextUrl %}/docs/archive/note/series/{{ page.series | downcase | replace: " ", "-" }}/01-{{ nextPage[0].title | downcase | replace: " ", "-" }}.html{% endcapture %}
+            {%- assign nextPage = study | where: "chapter", 1 -%}
+            {% capture nextUrl %}/docs/archive/learning-notes/study/{{ page.study | downcase | replace: " ", "-" }}/01-{{ nextPage[0].title | downcase | replace: " ", "-" }}.html{% endcapture %}
             {%- else -%}
-            {%- assign nextPage = series | where: "chapter", nextIndex -%}
+            {%- assign nextPage = study | where: "chapter", nextIndex -%}
 
             {% if nextIndex < 10 %}
             {% assign nextChapter = "0" | append: nextIndex %}
@@ -200,7 +200,7 @@ Grouping by a single character also ensures the number of groups is small.
             {% assign nextChapter = nextIndex %}
             {% endif %}
 
-            {% capture nextUrl %}/docs/archive/note/series/{{ page.series | downcase | replace: " ", "-" }}/{{ nextChapter }}-{{ nextPage[0].title | downcase | replace: " ", "-" }}.html{% endcapture %}
+            {% capture nextUrl %}/docs/archive/learning-notes/study/{{ page.study | downcase | replace: " ", "-" }}/{{ nextChapter }}-{{ nextPage[0].title | downcase | replace: " ", "-" }}.html{% endcapture %}
             {%- endif -%}
             <a href="{{ nextUrl }}" class="fw-700 text-grey-dk-100">다음 글</a>
         </div>
