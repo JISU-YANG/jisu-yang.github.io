@@ -1,15 +1,15 @@
 ---
 layout: note_series
 parent: Learning Notes
-study: Spring 입문
-chapter: 2
-title: Spring MVC
+study: Spring Beginner
+chapter: 5
+title: 3 Layer Architeckture
 toc: true
 reference:
   1: 
     author: Eric 튜터, Jinny 튜터, Jen 튜터
     year: 2024
     platform: 스파르타코딩클럽
-    content: Spring Master 1주차
+    content: Spring Master 2주차
     content-link: https://online.spartacodingclub.kr/
 ---

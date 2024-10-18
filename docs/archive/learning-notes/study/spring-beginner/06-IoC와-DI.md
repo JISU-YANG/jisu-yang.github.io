@@ -1,9 +1,9 @@
 ---
 layout: note_series
 parent: Learning Notes
-study: Spring 입문
-chapter: 5
-title: 3 Layer Architeckture
+study: Spring Beginner
+chapter: 6
+title: IoC와 DI
 toc: true
 reference:
   1: 

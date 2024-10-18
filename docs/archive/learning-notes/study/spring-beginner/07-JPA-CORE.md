@@ -1,7 +1,7 @@
 ---
 layout: note_series
 parent: Learning Notes
-study: Spring 입문
+study: Spring Beginner
 chapter: 7
 title: JPA CORE
 toc: true

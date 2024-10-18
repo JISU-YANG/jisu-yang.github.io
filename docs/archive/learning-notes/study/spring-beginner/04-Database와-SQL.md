@@ -1,15 +1,15 @@
 ---
 layout: note_series
 parent: Learning Notes
-study: Spring 입문
-chapter: 6
-title: IoC와 DI
+study: Spring Beginner
+chapter: 4
+title: Database와 SQL
 toc: true
 reference:
   1: 
     author: Eric 튜터, Jinny 튜터, Jen 튜터
     year: 2024
     platform: 스파르타코딩클럽
-    content: Spring Master 2주차
+    content: Spring Master 1주차
     content-link: https://online.spartacodingclub.kr/
 ---

@@ -1,9 +1,9 @@
 ---
 layout: note_series
 parent: Learning Notes
-study: Spring 입문
-chapter: 1
-title: 학습 준비하기
+study: Spring Beginner
+chapter: 2
+title: Spring MVC
 toc: true
 reference:
   1: 
