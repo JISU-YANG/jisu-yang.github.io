@@ -2,7 +2,7 @@
 layout: note_series
 parent: Learning Notes
 study: Spring 입문
-chapter: 1
+chapter: 6
 title: IoC와 DI
 toc: true
 reference:

@@ -2,7 +2,7 @@
 layout: note_series
 parent: Learning Notes
 study: Spring 입문
-chapter: 1
+chapter: 8
 title: Spring Data JPA
 toc: true
 reference:

@@ -2,7 +2,7 @@
 layout: note_series
 parent: Learning Notes
 study: Spring 입문
-chapter: 1
+chapter: 4
 title: Database와 SQL
 toc: true
 reference:
