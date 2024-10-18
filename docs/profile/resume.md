@@ -5,8 +5,10 @@ parent: Introduce
 nav_order: 1
 ---
 
+---
 
-<div class="flex-justify-between mb-4" style="display: inline-flex; width:100%">
+
+<div class="flex-justify-between mt-2 mb-4" style="display: inline-flex; width:100%">
     <div>
         <img id="profile-image" width="260" />
         <script>
@@ -141,9 +143,9 @@ nav_order: 1
 # Other Experience.
 ## Leadership.
 ### 크루 리더
-- 아이디어를 실현하는 프로젝트 네트워크, [EGO CREW](https://ego.so) 를 2009년부터 리드하고 있습니다.
-- 총 20명의 크루원과 다양한 주제로 28번의 프로젝트 및 스터디 활동을 진행하였습니다. 
-- 그 중, 7개의 개발 관련 프로젝트를 진행하였고, 5개의 서비스는 웹과 앱스토어에 출시할 수 있었습니다.
+- 아이디어를 실현하는 프로젝트 네트워크, [EGO CREW](https://ego.so/) 를 2009년부터 리드하고 있습니다.
+- 총 19명의 크루원과 다양한 주제로 30번의 프로젝트 및 스터디 활동을 진행하였습니다. 
+- 그 중, 8개 프로젝트에서 개발을 담당하였으며, 5개의 서비스는 웹과 앱스토어에 출시할 수 있었습니다.
 
 ### 교내 수상
   - **선행상**, 코리아 IT 아카데미, 2019  
