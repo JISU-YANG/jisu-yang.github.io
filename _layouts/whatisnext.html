@@ -5,18 +5,15 @@ layout: table_wrappers
 {% include head.html %}
 <style>
     .entry > h2{
-        margin-bottom: 1.5em;
+        margin-bottom: 1em;
     }
     .category {
-        margin: 1.5em;
-        padding: 1.5em;
-        border: 1px solid #ecebed;
-        border-radius: 4px;
+        margin-bottom: 3em;
     }
 
     .category > h3 {
         margin-top: 0;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
 
     .next-item > li {
@@ -25,24 +22,24 @@ layout: table_wrappers
         list-style: none;
         padding: 0;
         margin: 0 0 0 1.5em;
-        line-height: 3em;
+        line-height: 2.1em;
     }
     .next-summary {
         display: flex;
         width: 100%;
         justify-content: flex-start;
         align-items: center;
-        font-size: 0.8em;
 
     }
 
     .next-summary-title {
         flex-grow: 1;
-        font-weight: bold;
     }
 
     .next-summary-item {
-        margin-left: 10px;
+        margin-left: 0.9em;
+        color: #959396;
+        font-size: 0.9em;
     }
 </style>
 <body>
@@ -308,10 +305,11 @@ layout: table_wrappers
                             <li class="task-list-item">
                                 <input type="checkbox" class="task-list-item-checkbox" ${item.status === "완료" ? "checked=\"checked\"" : ""} disabled="disabled"/>
                                 <div class="next-summary">
-                                    <div class="next-summary-title" ${item.status === "취소" ? "style=\"text-decoration: line-through\"" : ""}/>${item.status === "완료" ? "<a href=\""+item.link+"\">"+item.title+"</a>" : item.title}</div>
+                                    <div class="next-summary-title" ${item.status === "중단" ? "style=\"text-decoration: line-through\"" : ""}/>${item.status === "완료" ? "<a href=\""+item.link+"\">"+item.title+"</a>" : item.title}</div>
                                     <div class="next-summary-item" style="">${item.estimated_duration}</div>
-                                    <div class="next-summary-item" style="color: #7253ed">${item.status}</div>
-                                    <div class="next-summary-item" style="color: #959396">${item.planned_date}</div>
+                                    <div class="next-summary-item">${item.planned_date}</div>
+                                    <div class="next-summary-item"><b>${item.status}</b></div>
+
                                 </div>
                             </li>
                             `;
