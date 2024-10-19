@@ -63,3 +63,14 @@ Spring에서는 클라이언트가 보낸 데이터를 객체로 변환하기 �
 
 - **@ModelAttribute**와 **@RequestParam**은 타입에 따라 자동으로 데이터를 객체로 매핑해준다. 생략 가능하다.
 - **@RequestBody**는 **JSON** 데이터를 객체로 변환해야 할 때 사용한다.
+
+---
+
+## 실습자료
+### GitHub
+- [Controller 이해하기](https://github.com/JISU-YANG/study-spring-mvc/commit/021ed980e17db97de0b3f1e74a2a85d623e01cf1)
+- [정적페이지와 동적페이지](https://github.com/JISU-YANG/study-spring-mvc/commit/badcd4a31cc7392012d3f3e964f86367f99bc694)
+- [데이터를 클라이언트에 반환하는 방법](https://github.com/JISU-YANG/study-spring-mvc/commit/9d8754f8bec92c74f555aaf22af1055e4046095b)
+- [Jackson이란 무엇일까?](https://github.com/JISU-YANG/study-spring-mvc/commit/67809d5c592e29f319746ad290534706ef7fa376)
+- [Path Variable과 Request Param](https://github.com/JISU-YANG/study-spring-mvc/commit/6fa1dc99170538fcdfbde74c5c98d22a3f91e82a)
+- [HTTP 데이터를 객체로 처리하는 방법](https://github.com/JISU-YANG/study-spring-mvc/commit/572ac663b1e70baa07c60451e0db6a5a04df02ec)
