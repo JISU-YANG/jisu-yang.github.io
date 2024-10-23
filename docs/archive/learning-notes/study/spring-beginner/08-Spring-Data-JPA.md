@@ -6,12 +6,12 @@ chapter: 8
 title: Spring Data JPA
 toc: true
 reference:
-  1: 
-    author: Eric 튜터, Jinny 튜터, Jen 튜터
-    year: 2024
+  1:
+    author: 최원빈
+    year: 2023
     platform: 스파르타코딩클럽
-    content: Spring Master 2주차
-    content-link: https://online.spartacodingclub.kr/
+    content: 웹개발의 봄 Spring
+    content-link: https://spartacodingclub.kr/online/spring_v2
 ---
 
 ### Spring Boot 환경에서의 JPA
