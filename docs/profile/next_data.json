@@ -40,6 +40,22 @@
         ],
         "topic": [
           {
+            "title": "Java Optional",
+            "status": "예정",
+            "estimated_duration": "60분",
+            "planned_date": "24.10.",
+            "priority": 1,
+            "link": ""
+          },
+          {
+            "title": "Java Generics",
+            "status": "예정",
+            "estimated_duration": "60분",
+            "planned_date": "24.10.",
+            "priority": 1,
+            "link": ""
+          },
+          {
             "title": "REST와 RESTful의 차이",
             "status": "예정",
             "estimated_duration": "30분",
@@ -83,32 +99,32 @@
         "education": [
           {
             "title": "Spring 입문주차",
-            "status": "예정",
-            "estimated_duration": "600분",
+            "status": "완료",
+            "estimated_duration": "1200분",
             "planned_date": "24.10.",
             "priority": 1,
-            "link": "https://online.spartacodingclub.kr/enrolleds/670f2ab9cf76d36a2736a618/rounds/66ff5bf62c7d72f578593d01/roadmap"
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#spring-beginner"
+          },
+          {
+            "title": "Spring 숙련주차",
+            "status": "완료",
+            "estimated_duration": "1440분",
+            "planned_date": "24.10.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#spring-intermediate"
           },
           {
             "title": "Spring 심화주차",
             "status": "예정",
-            "estimated_duration": "240분",
+            "estimated_duration": "480분",
             "planned_date": "24.10.",
             "priority": 1,
             "link": "https://online.spartacodingclub.kr/enrolleds/670f2ab94ee14f38d0e09df8/rounds/66ff5c2b7a7a720bcbea9d9a/roadmap"
           },
           {
-            "title": "Spring 숙련주차",
-            "status": "예정",
-            "estimated_duration": "720분",
-            "planned_date": "24.10.",
-            "priority": 1,
-            "link": "https://online.spartacodingclub.kr/enrolleds/670f2ab99fbb80fb05586445/rounds/66ff5c117a7a720bcbea9cf8/roadmap"
-          },
-          {
             "title": "Docker + CI/CD",
             "status": "예정",
-            "estimated_duration": "240분",
+            "estimated_duration": "480분",
             "planned_date": "24.10.",
             "priority": 1,
             "link": "https://online.spartacodingclub.kr/enrolleds/670f2ab950a250458300907a/rounds/66ff5bd60d346a080ef0c957/roadmap"
@@ -116,7 +132,7 @@
           {
             "title": "JPA 심화",
             "status": "예정",
-            "estimated_duration": "300분",
+            "estimated_duration": "600분",
             "planned_date": "24.10.",
             "priority": 1,
             "link": "https://online.spartacodingclub.kr/enrolleds/670f2ab99fbb80fb05586445/rounds/66ff5c117a7a720bcbea9cf8/roadmap"
