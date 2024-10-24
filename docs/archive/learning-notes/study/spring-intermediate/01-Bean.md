@@ -1,9 +1,9 @@
 ---
 layout: note_series
 parent: Learning Notes
-study: Spring intermediate
+study: Spring Intermediate
 chapter: 1
-title: 학습 준비하기
+title: Bean
 toc: true
 reference:
   1:
