@@ -206,7 +206,7 @@ layout: table_wrappers
             {% for study_title in study_list %}
 
             <details class="highlight p-5 mt-5" style="border-radius: 6px">
-                <summary class="text-purple-000 fw-500">{{ study_title }}</summary>
+                <summary id="{{ study_title  | downcase | replace: ' ', '-' }}" class="text-purple-000 fw-500">{{ study_title }}</summary>
 
                 {%- assign temp_study_item = learning-notes | where: "study", study_title | sort: "chapter" -%}
                 <div markdown="1">
