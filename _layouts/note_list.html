@@ -193,22 +193,42 @@ layout: table_wrappers
 
             {% endfor %}
 
+            <hr>
+
             {% assign study_list = "" | split: "" %}
             {% for item in study %}
             {% assign study_list = study_list | push: item.study %}
             {% endfor %}
             {% assign study_list = study_list | uniq | reverse %}
 
-            <hr>
+
+            {%- assign notes_page = second_level_pages | where: "title", "Learning Notes" -%}
+            {% assign sort_info = notes_page[0].series_sort %}
+            {% assign sort_list = "" %}
+
+            {% for i in (1..sort_info.size) %}
+                {% for study_item in study_list %}
+                    {% assign temp_item = study_item | downcase | replace: " ", "-" %}
+                    {% if sort_info[i] == temp_item %}
+                        {% if sort_list == "" %}
+                        {% assign sort_list = study_item %}  <!-- 첫 번째 아이템 추가 시 쉼표 없이 추가 -->
+                        {% else %}
+                        {% assign sort_list = sort_list | append: ", " | append: study_item %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            {% assign sort_list = sort_list | split: ", " | reverse %}
 
             <h2>Study</h2>
 
-            {% for study_title in study_list %}
+            {% for sort_item in sort_list %}
 
             <details class="highlight p-5 mt-5" style="border-radius: 6px">
-                <summary id="{{ study_title  | downcase | replace: ' ', '-' }}" class="text-purple-000 fw-500">{{ study_title }}</summary>
+                <summary id="{{ sort_item | downcase | replace: ' ', '-' }}" class="text-purple-000 fw-500">{{ sort_item }}</summary>
 
-                {%- assign temp_study_item = learning-notes | where: "study", study_title | sort: "chapter" -%}
+
+                {%- assign temp_study_item = learning-notes | where: "study", sort_item | sort: "chapter" -%}
                 <div markdown="1">
                     <hr>
 
@@ -220,7 +240,7 @@ layout: table_wrappers
                         {% assign item_chapter = temp_item.chapter %}
                         {% endif %}
 
-                        {% capture item_link %}/docs/archive/learning-notes/study/{{ study_title | downcase | replace: " ", "-" }}/{{ item_chapter }}-{{ temp_item.title | downcase | replace: " ", "-" }}.html{% endcapture %}
+                        {% capture item_link %}/docs/archive/learning-notes/study/{{ sort_item | downcase | replace: ' ', '-' }}/{{ item_chapter }}-{{ temp_item.title | downcase | replace: " ", "-" }}.html{% endcapture %}
                         <li id="{{ temp_item.title | downcase | replace: ' ', '-' }}"><a href="{{ item_link }}">{{ temp_item.chapter }}. {{ temp_item.title }}</a></li>
                         {% endfor %}
 
