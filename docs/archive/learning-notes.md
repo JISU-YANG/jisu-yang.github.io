@@ -13,4 +13,5 @@ series_sort:
     5: refactoring
     6: spring-beginner
     7: spring-intermediate
+    8: spring-advanced
 ---
