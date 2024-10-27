@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JISULOG 업데이트 노트
+title: JISULOG 업데이트
 parent: Experience
 nav_order: 1
 ---
