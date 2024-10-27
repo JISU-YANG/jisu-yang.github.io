@@ -40,31 +40,31 @@
         ],
         "topic": [
           {
-            "title": "Java Optional",
-            "status": "예정",
-            "estimated_duration": "60분",
-            "planned_date": "24.10.",
-            "priority": 1,
-            "link": ""
-          },
-          {
-            "title": "Java Generics",
-            "status": "예정",
-            "estimated_duration": "60분",
-            "planned_date": "24.10.",
-            "priority": 1,
-            "link": ""
-          },
-          {
-            "title": "REST와 RESTful의 차이",
-            "status": "예정",
+            "title": "JPA, Hibernate, Spring Date JPA 차이",
+            "status": "완료",
             "estimated_duration": "30분",
             "planned_date": "24.10.",
             "priority": 3,
-            "link": ""
+            "link": "https://jisulog.com/docs/archive/learning-notes/til/spring-framework/jpa-&-hibernate-&-spring-data-jpa-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%A0%95%EB%A6%AC.html"
           },
           {
-            "title": "JPA, Hibernate, Spring Date JPA 차이",
+            "title": "Java Optional",
+            "status": "완료",
+            "estimated_duration": "60분",
+            "planned_date": "24.10.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes/til/java/optional.html"
+          },
+          {
+            "title": "Java Generics",
+            "status": "완료",
+            "estimated_duration": "60분",
+            "planned_date": "24.10.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes/til/java/generics.html"
+          },
+          {
+            "title": "REST와 RESTful의 차이",
             "status": "예정",
             "estimated_duration": "30분",
             "planned_date": "24.10.",
@@ -115,11 +115,11 @@
           },
           {
             "title": "Spring 심화주차",
-            "status": "예정",
+            "status": "완료",
             "estimated_duration": "480분",
             "planned_date": "24.10.",
             "priority": 1,
-            "link": "https://online.spartacodingclub.kr/enrolleds/670f2ab94ee14f38d0e09df8/rounds/66ff5c2b7a7a720bcbea9d9a/roadmap"
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#spring-advanced"
           },
           {
             "title": "Docker + CI/CD",
