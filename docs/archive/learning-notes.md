@@ -14,4 +14,5 @@ series_sort:
     6: spring-beginner
     7: spring-intermediate
     8: spring-advanced
+    9: jpa-advanced
 ---
