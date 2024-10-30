@@ -15,4 +15,5 @@ series_sort:
     7: spring-intermediate
     8: spring-advanced
     9: jpa-advanced
+    10: docker+cicd
 ---
