@@ -123,19 +123,19 @@
           },
           {
             "title": "Docker + CI/CD",
-            "status": "예정",
+            "status": "완료",
             "estimated_duration": "480분",
             "planned_date": "24.10.",
             "priority": 1,
-            "link": "https://online.spartacodingclub.kr/enrolleds/670f2ab950a250458300907a/rounds/66ff5bd60d346a080ef0c957/roadmap"
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#docker+cicd"
           },
           {
             "title": "JPA 심화",
-            "status": "예정",
+            "status": "완료",
             "estimated_duration": "600분",
             "planned_date": "24.10.",
             "priority": 1,
-            "link": "https://online.spartacodingclub.kr/enrolleds/670f2ab99fbb80fb05586445/rounds/66ff5c117a7a720bcbea9cf8/roadmap"
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#spring-advanced"
           }
         ]
       }
