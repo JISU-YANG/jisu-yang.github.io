@@ -3,7 +3,7 @@ layout: note_series
 parent: Learning Notes
 study: Spring Beginner
 chapter: 5
-title: 3 Layer Architeckture
+title: 3 Layer Architecture
 toc: true
 reference:
   1:
