@@ -174,26 +174,8 @@ layout: table_wrappers
             {%- assign learning-notes = second_level_pages | where: "parent", "Learning Notes" -%}
             {%- assign study = learning-notes | where_exp: "item", "item.study != undefined" -%}
             {%- assign til = learning-notes | where_exp: "item", "item.study == undefined" -%}
-            <h2>Today I Learned</h2>
-            {% assign til_category = "" | split: "" %}
-            {% for item in til %}
-            {% assign til_category = til_category | push: item.category %}
-            {% endfor %}
-            {% assign til_category = til_category | uniq %}
 
-            {% for category_item in til_category %}
-            <h3 id="{{ category_item | downcase | replace: ' ', '-' }}">{{ category_item }}</h3>
-            <ul>
-                {% assign til_item = til | where_exp: "item", "item.category == category_item" %}
-                {% for item in til_item %}
-                {% capture item_link %}/docs/archive/learning-notes/til/{{ category_item | downcase | replace: " ", "-" }}/{{ item.title | downcase | replace: " ", "-" }}.html{% endcapture %}
-                <li><a href="{{ item_link }}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
 
-            {% endfor %}
-
-            <hr>
 
             {% assign study_list = "" | split: "" %}
             {% for item in study %}
@@ -201,22 +183,21 @@ layout: table_wrappers
             {% endfor %}
             {% assign study_list = study_list | uniq | reverse %}
 
-
             {%- assign notes_page = second_level_pages | where: "title", "Learning Notes" -%}
             {% assign sort_info = notes_page[0].series_sort %}
             {% assign sort_list = "" %}
 
             {% for i in (1..sort_info.size) %}
-                {% for study_item in study_list %}
-                    {% assign temp_item = study_item | downcase | replace: " ", "-" %}
-                    {% if sort_info[i] == temp_item %}
-                        {% if sort_list == "" %}
-                        {% assign sort_list = study_item %}  <!-- 첫 번째 아이템 추가 시 쉼표 없이 추가 -->
-                        {% else %}
-                        {% assign sort_list = sort_list | append: ", " | append: study_item %}
-                        {% endif %}
-                    {% endif %}
-                {% endfor %}
+            {% for study_item in study_list %}
+            {% assign temp_item = study_item | downcase | replace: " ", "-" %}
+            {% if sort_info[i] == temp_item %}
+            {% if sort_list == "" %}
+            {% assign sort_list = study_item %}  <!-- 첫 번째 아이템 추가 시 쉼표 없이 추가 -->
+            {% else %}
+            {% assign sort_list = sort_list | append: ", " | append: study_item %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
             {% endfor %}
             {% assign sort_list = sort_list | split: ", " | reverse %}
 
@@ -248,8 +229,26 @@ layout: table_wrappers
 
                 </div>
             </details>
+            {% endfor %}
 
+            <hr>
 
+            <h2>Today I Learned</h2>
+            {% assign til_category = "" | split: "" %}
+            {% for item in til %}
+            {% assign til_category = til_category | push: item.category %}
+            {% endfor %}
+            {% assign til_category = til_category | uniq %}
+
+            {% for category_item in til_category %}
+            <h3 id="{{ category_item | downcase | replace: ' ', '-' }}">{{ category_item }}</h3>
+            <ul>
+                {% assign til_item = til | where_exp: "item", "item.category == category_item" %}
+                {% for item in til_item %}
+                {% capture item_link %}/docs/archive/learning-notes/til/{{ category_item | downcase | replace: " ", "-" }}/{{ item.title | downcase | replace: " ", "-" }}.html{% endcapture %}
+                <li><a href="{{ item_link }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
 
             {% endfor %}
 

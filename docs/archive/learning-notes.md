@@ -16,4 +16,6 @@ series_sort:
     8: spring-advanced
     9: jpa-advanced
     10: docker+cicd
+    11: sparta-til
+    12: sparta-algorithm
 ---
