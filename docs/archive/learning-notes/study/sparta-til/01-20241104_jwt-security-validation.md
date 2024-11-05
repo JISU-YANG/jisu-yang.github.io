@@ -3,7 +3,7 @@ layout: note_series
 parent: Learning Notes
 study: Sparta Til
 chapter: 1
-title: 20241104
+title: 20241104_Jwt Security Validation
 toc: true
 ---
 
