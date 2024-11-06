@@ -1,6 +1,6 @@
 const PathResource = {
     PROFILE: 'assets/',
-    PROJECT_REVIEW: 'docs/essay/project-review/resource/',
+    PROJECT_REVIEW: 'docs/experience/project-review/resource/',
     NOTE: 'docs/archive/learning-notes/resource/'
 }
 class PathBuilder{
