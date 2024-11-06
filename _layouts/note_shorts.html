@@ -6,6 +6,23 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
+
+<style>
+
+    p > img{
+        width: calc(100% - 2em - 2px);
+        border-radius: 6px;
+        margin: 1em;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    p:has(img){
+        border-radius: 6px;
+        background: #f5f6fa;
+        line-height: 0 !important;
+        margin: 2em 0;
+    }
+</style>
+
 <body>
 <a class="skip-to-main" href="#main-content">Skip to main content</a>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
