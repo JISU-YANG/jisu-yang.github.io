@@ -11,7 +11,7 @@ toc: true
 summary: # 프로젝트 개요
     service: # 서비스 정보 @name: 이름 @subject: 주제
         name: NP-Launcher v1.1
-        subject: 북마크 런처 프로그램
+        subject: 북마크 런처 프로그램 v1.1
     platform: # 서비스 플랫폼 @environment: 지원환경 @demo: 데모 url @github: 깃헙 url, @value: default -> n
         environment: 윈도우 응용 프로그램  
         demo: https://github.com/JISU-YANG/NP-Launcher/releases/tag/v1.1
