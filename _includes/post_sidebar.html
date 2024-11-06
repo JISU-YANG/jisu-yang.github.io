@@ -166,9 +166,9 @@ Grouping by a single character also ensures the number of groups is small.
         <div id="project-navigation" class="text-grey-dk-000 fs-2 d-flex flex-justify-between">
             <div>{{ nowIndex }} / {{ maxIndex }}</div>
             {%- if nowIndex == maxIndex -%}
-            {% capture nextUrl %}/docs/essay/project-review/{{ thisParent[0].project_list[1].years }}-{{ thisParent[0].project_list[1].title | downcase | replace: " ", "-" }}.html{% endcapture %}
+            {% capture nextUrl %}/docs/experience/project-review/{{ thisParent[0].project_list[1].years }}-{{ thisParent[0].project_list[1].title | downcase | replace: " ", "-" }}.html{% endcapture %}
             {%- else -%}
-            {% capture nextUrl %}/docs/essay/project-review/{{ thisParent[0].project_list[nextIndex].years }}-{{ thisParent[0].project_list[nextIndex].title | downcase | replace: " ", "-" }}.html{% endcapture %}
+            {% capture nextUrl %}/docs/experience/project-review/{{ thisParent[0].project_list[nextIndex].years }}-{{ thisParent[0].project_list[nextIndex].title | downcase | replace: " ", "-" }}.html{% endcapture %}
             {%- endif -%}
             <a href="{{ nextUrl }}" class="fw-700 text-grey-dk-100">다음 글</a>
         </div>

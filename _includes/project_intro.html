@@ -247,13 +247,13 @@
         <div class="thumbnail-image">
             {% assign imgList = page.intro.thumbnail | split: ", " %}
             {% for img in imgList %}
-            <img data-index="{{ forloop.index }}" src="https://cdn.jsdelivr.net/gh/jisu-yang/jisu-yang.github.io/docs/essay/project-review/resource/{{ img }}" alt="{{ img }}">
+            <img data-index="{{ forloop.index }}" src="https://cdn.jsdelivr.net/gh/jisu-yang/jisu-yang.github.io/docs/experience/project-review/resource/{{ img }}" alt="{{ img }}">
             {% endfor %}
         </div>
         <div class="thumbnail-stack">
             {% assign imgList = page.intro.thumbnail | split: ", " %}
             {% for img in imgList %}
-            <img data-select="{{ forloop.index }}" src="https://cdn.jsdelivr.net/gh/jisu-yang/jisu-yang.github.io/docs/essay/project-review/resource/{{ img }}" alt="{{ img }}">
+            <img data-select="{{ forloop.index }}" src="https://cdn.jsdelivr.net/gh/jisu-yang/jisu-yang.github.io/docs/experience/project-review/resource/{{ img }}" alt="{{ img }}">
             {% endfor %}
         </div>
     </div>

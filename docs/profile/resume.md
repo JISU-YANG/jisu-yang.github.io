@@ -78,7 +78,7 @@ nav_order: 1
 \: SPACE
 {: .text-grey-dk-000 .fs-2 .fw-500 .d-inline-block }
 
-[회고](https://jisulog.com/docs/essay/project-review/2021-ego-space)
+[회고](https://jisulog.com/docs/experience/project-review/2021-ego-space)
 {: .float-right .fs-2 .fw-500 .d-inline-block .mt-6 .mb-0 }
 [GitHub](https://github.com/egocrew/SPACE)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
@@ -97,7 +97,7 @@ nav_order: 1
 \: Hyper
 {: .text-grey-dk-000 .fs-2 .fw-500 .d-inline-block }
 
-[회고](https://jisulog.com/docs/essay/project-review/2020-hyper)
+[회고](https://jisulog.com/docs/experience/project-review/2020-hyper)
 {: .float-right .fs-2 .fw-500 .d-inline-block .mt-6 .mb-0 }
 [GitHub](https://github.com/JISU-YANG/2020_Hyper)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
@@ -116,7 +116,7 @@ nav_order: 1
 \: Darling
 {: .text-grey-dk-000 .fs-2 .fw-500 .d-inline-block }
 
-[회고](https://jisulog.com/docs/essay/project-review/2021-darling)
+[회고](https://jisulog.com/docs/experience/project-review/2021-darling)
 {: .float-right .fs-2 .fw-500 .d-inline-block .mt-6 .mb-0 }
 [Demo](https://apps.apple.com/om/app/%EB%8B%AC%EB%A7%81/id1583530907)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
@@ -130,7 +130,7 @@ nav_order: 1
 \: Aloha Coupon
 {: .text-grey-dk-000 .fs-2 .fw-500 .d-inline-block }
 
-[회고](https://jisulog.com/docs/essay/project-review/2021-aloha-coupon)
+[회고](https://jisulog.com/docs/experience/project-review/2021-aloha-coupon)
 {: .float-right .fs-2 .fw-500 .d-inline-block .mt-6 .mb-0 }
 [Demo](https://apps.apple.com/us/app/%EC%95%8C%EB%A1%9C%ED%95%98-%EC%BF%A0%ED%8F%B0/id1548121101)
 {: .float-right .fs-2 .fw-500 .mr-2 .d-inline-block .mt-6 }
