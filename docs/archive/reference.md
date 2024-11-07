@@ -9,6 +9,11 @@ toc: true
 
 ---
 ## Development
+
+### AWS
+- [별칭으로 터미널에서 접속하기](https://soobarkbar.tistory.com/223)
+- [이미 생성된 EC2 키 페어 변경하기](https://dev.classmethod.jp/articles/jw-try-changing-an-already-created-key-pair-for-amazon-ec2/)
+
 ### IntelliJ
 - [Mac 세로편집모드 단축키](https://islet4you.tistory.com/entry/Intellij-%EC%84%B8%EB%A1%9C%ED%8E%B8%EC%A7%91%EB%AA%A8%EB%93%9C-%EC%A0%84%ED%99%98-%EB%8B%A8%EC%B6%95%ED%82%A4)
 
