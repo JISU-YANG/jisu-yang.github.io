@@ -26,6 +26,7 @@ toc: true
 - [사용중인 GitHub 계정 변경하는 방법](https://www.lainyzine.com/ko/article/how-to-change-the-github-account-used-by-the-development-environment/)
 - [이미 push한 commit message 수정하기](https://velog.io/@dev_bomdong/Git-%EC%9D%B4%EB%AF%B8-push%ED%95%9C-commit-message-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0)
 - [Issue, Project 활용하기](https://velog.io/@dohaeng0/GitHub-Project-Issue-%ED%99%9C%EC%9A%A9)
+- [Github Actions에서 Secrets을 통해 env 파일 생성하기](https://ji5485.github.io/post/2021-06-26/create-env-with-github-actions-secrets/)
 
 ### Javascript
 - [data 속성을 셀렉터 그룹으로 지정하기](https://stackoverflow.com/a/7084588)
