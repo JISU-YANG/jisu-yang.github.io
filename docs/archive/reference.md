@@ -16,6 +16,7 @@ toc: true
 - [별칭으로 터미널에서 접속하기](https://soobarkbar.tistory.com/223)
 - [이미 생성된 EC2 키 페어 변경하기](https://dev.classmethod.jp/articles/jw-try-changing-an-already-created-key-pair-for-amazon-ec2/)
 - [비용 알람 설정하기](https://brunch.co.kr/@topasvga/3557)
+- [프리티어 S3 만들기](https://velog.io/@leeeeeyeon/AWS-S3%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EC%84%9C%EB%B2%84%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90)
 
 ### IntelliJ
 - [Mac 세로편집모드 단축키](https://islet4you.tistory.com/entry/Intellij-%EC%84%B8%EB%A1%9C%ED%8E%B8%EC%A7%91%EB%AA%A8%EB%93%9C-%EC%A0%84%ED%99%98-%EB%8B%A8%EC%B6%95%ED%82%A4)
