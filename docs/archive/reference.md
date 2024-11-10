@@ -12,6 +12,7 @@ toc: true
 ### Spring
 - [Spring Boot에서 사용가능한 모듈 만들기](https://blog.naver.com/PostView.naver?blogId=writer0713&logNo=222249266550&parentCategoryNo=&categoryNo=83&viewDate=&isShowPopularPosts=false&from=postView)
 - [S3 이미지 업로드 구현하기](https://innovation123.tistory.com/197)
+- [application.yml 민감한 정보 환경변수로 묶어내기](https://g-db.tistory.com/entry/Spring-Boot-%EB%8F%84%EC%BB%A4-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-applicationyml-%EB%AF%BC%EA%B0%90%ED%95%9C-%EC%A0%95%EB%B3%B4-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98%EB%A1%9C-%EB%AC%B6%EC%96%B4%EB%82%B4%EA%B8%B0)
 
 ### AWS
 - [별칭으로 터미널에서 접속하기](https://soobarkbar.tistory.com/223)
@@ -29,6 +30,10 @@ toc: true
 - [이미 push한 commit message 수정하기](https://velog.io/@dev_bomdong/Git-%EC%9D%B4%EB%AF%B8-push%ED%95%9C-commit-message-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0)
 - [Issue, Project 활용하기](https://velog.io/@dohaeng0/GitHub-Project-Issue-%ED%99%9C%EC%9A%A9)
 - [Github Actions에서 Secrets을 통해 env 파일 생성하기](https://ji5485.github.io/post/2021-06-26/create-env-with-github-actions-secrets/)
+- [메인 브랜치에서 작업한 내용 내 브랜치로 옮기기](https://velog.io/@wlfjd0627/git-%EB%A9%94%EC%9D%B8-%EB%B8%8C%EB%9E%9C%EC%B9%98%EC%97%90%EC%84%9C-%EC%9E%91%EC%97%85%ED%95%9C%EA%B1%B0-%EB%82%B4-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%A1%9C-%EC%98%AE%EA%B8%B0%EA%B8%B0)
+
+### DB
+- [[PostgreSQL] PostgreSQL 설치 및 DB 생성](https://chb2005.tistory.com/192)
 
 ### Javascript
 - [data 속성을 셀렉터 그룹으로 지정하기](https://stackoverflow.com/a/7084588)
