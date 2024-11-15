@@ -117,11 +117,12 @@ successfulAuthentication과 unsuccessfulAuthentication 메서드를 오버라이
 회원가입 API에서 `403 Forbidden` 오류가 발생하는 문제를 겪었다. 원인은 Security Config에서 **허용 순서** 때문이었다.
 
 **원인분석**  
-```Java
+
+```java
 // 모든 요청은 인증이 필요하도록 설정
 authorizeHttpRequests.requestMatchers("/api/**").authenticated();
 ```
-```Java
+```java
 // 회원가입과 로그인 API에 대해서는 인증 없이 접근할 수 있도록 설정
 authorizeHttpRequests.requestMatchers("/api/auth/**").permitAll();
 ```
@@ -130,7 +131,7 @@ authorizeHttpRequests.requestMatchers("/api/auth/**").permitAll();
 
 **해결 방법**
 
-```Java
+```java
 // 회원가입과 로그인 API에 대해서는 인증 없이 접근할 수 있도록 설정
 authorizeHttpRequests.requestMatchers("/api/auth/**").permitAll();
 
