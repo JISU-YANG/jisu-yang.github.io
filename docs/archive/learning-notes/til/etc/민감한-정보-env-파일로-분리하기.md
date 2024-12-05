@@ -6,12 +6,11 @@ title: 민감한 정보 env 파일로 분리하기
 toc: true
 reference:
 1:
-author: 창의
-year: 2024
-platform: 블로그
-content:
-[Spring Boot] 도커 컨테이너에 환경에서 application.yml 민감한 정보 환경변수로 묶어내기
-content-link: "https://g-db.tistory.com/entry/Spring-Boot-%EB%8F%84%EC%BB%A4-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-applicationyml-%EB%AF%BC%EA%B0%90%ED%95%9C-%EC%A0%95%EB%B3%B4-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98%EB%A1%9C-%EB%AC%B6%EC%96%B4%EB%82%B4%EA%B8%B0"
+    author: 창의
+    year: 2024
+    platform: 블로그
+    content: "[Spring Boot] 도커 컨테이너에 환경에서 application.yml 민감한 정보 환경변수로 묶어내기"
+    content-link: "https://g-db.tistory.com/entry/Spring-Boot-%EB%8F%84%EC%BB%A4-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-applicationyml-%EB%AF%BC%EA%B0%90%ED%95%9C-%EC%A0%95%EB%B3%B4-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98%EB%A1%9C-%EB%AC%B6%EC%96%B4%EB%82%B4%EA%B8%B0"
 ---
 
 ## 값 저장하기
