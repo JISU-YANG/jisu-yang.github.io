@@ -140,6 +140,12 @@ Grouping by a single character also ensures the number of groups is small.
     li.toc-entry.toc-h1{
         margin-bottom: 1em;
     }
+
+    #toc-title-date{
+        color: #959396;
+        font-weight: 400;
+        font-size: 10pt;
+    }
 </style>
 
 <div class="side-bar">
@@ -150,8 +156,21 @@ Grouping by a single character also ensures the number of groups is small.
         </a>
     </div>
     <nav aria-label="Main" id="site-nav" class="site-nav">
-        <div class="ml-6 mb-4 fs-4 fw-700 text-grey-dk-100">Chapter {{ page.chapter }}</div>
-        <div class="ml-6 mb-4 fs-4 fw-700 text-grey-dk-100">{{ page.title }}</div>
+        <div class="ml-6 mb-4 fs-4 fw-700 text-purple-000">Chapter {{ page.chapter }}</div>
+        <div class="ml-6 mb-6 fs-4 fw-700 text-grey-dk-100">
+            {% if page.title contains "_" %}
+            {% assign title_parts = page.title | split: "_" %}
+            <div>{{ title_parts[1] }}</div>
+            {% assign date_raw = title_parts[0] %}
+            {% assign year = date_raw | slice: 0, 4 %}
+            {% assign month = date_raw | slice: 4, 2 %}
+            {% assign day = date_raw | slice: 6, 2 %}
+            <div id="toc-title-date">{{ year }}.{{ month }}.{{ day }}.</div>
+            {% else %}
+            {{ page.title }}
+            {% endif %}
+        </div>
+
 
         {{ content | toc_only }}
 
