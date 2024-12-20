@@ -135,7 +135,55 @@
             "estimated_duration": "600분",
             "planned_date": "24.10.",
             "priority": 1,
-            "link": "https://jisulog.com/docs/archive/learning-notes.html#spring-advanced"
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#jpa-advanced"
+          },
+          {
+            "title": "프로젝트 관리 심화",
+            "status": "완료",
+            "estimated_duration": "480분",
+            "planned_date": "24.11.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
+          },
+          {
+            "title": "MSA",
+            "status": "완료",
+            "estimated_duration": "1080분",
+            "planned_date": "24.11.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
+          },
+          {
+            "title": "인메모리 저장소 및 캐싱 전략",
+            "status": "완료",
+            "estimated_duration": "420분",
+            "planned_date": "24.11.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
+          },
+          {
+            "title": "대규모 스트림 처리",
+            "status": "진행",
+            "estimated_duration": "990분",
+            "planned_date": "24.12.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
+          },
+          {
+            "title": "모니터링 시스템 및 시큐어 코딩",
+            "status": "예정",
+            "estimated_duration": "480분",
+            "planned_date": "24.12.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
+          },
+          {
+            "title": "장애 대응",
+            "status": "예정",
+            "estimated_duration": "810분",
+            "planned_date": "24.12.",
+            "priority": 1,
+            "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
           }
         ]
       }
