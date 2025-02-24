@@ -144,7 +144,7 @@ exit
 Docker는 모든 Container 로그를 표준 출력(stdout) 또는 표준 에러(stderr)로 캡처하여 JSON 형식으로 파일에 기록한다.
 Ubuntu에서는 `/var/lib/docker/containers/[ContainerID]/[ContainerID]-json.log`에 로그가 기록된다.
 
-
+{% raw %}
 ```bash
 docker run --name logs-test --rm -d ubuntu:22.04 /bin/bash -c 'while true; do date; sleep 1; done'
 
@@ -160,3 +160,4 @@ docker logs -f --tail 10 logs-test
 # 로그 파일 설정 확인하기
 docker inspect logs-test --format "{{.LogPath}}"
 ```
+{% endraw %}
