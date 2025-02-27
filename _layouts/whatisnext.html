@@ -3,10 +3,12 @@ layout: table_wrappers
 ---
 
 {% include head.html %}
+
 <style>
-    .entry > h2{
+    .entry > h2 {
         margin-bottom: 1em;
     }
+
     .category {
         margin-bottom: 3em;
     }
@@ -16,31 +18,60 @@ layout: table_wrappers
         text-transform: uppercase;
     }
 
-    .next-item > li {
+    .task-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .next-item {
         display: flex;
         align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0 0 0 1.5em;
-        line-height: 2.1em;
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 40px;
+        position: relative;
     }
+
+    .task-list-item-checkbox {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        padding-right: 10px;
+    }
+
     .next-summary {
         display: flex;
-        width: 100%;
-        justify-content: flex-start;
+        flex: 1;
+        justify-content: space-between;
         align-items: center;
-
     }
 
     .next-summary-title {
         flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .next-summary-item {
-        margin-left: 0.9em;
+        margin-left: 10px;
         color: #959396;
         font-size: 0.9em;
     }
+    .main-content .task-list-item-checkbox {
+        margin-left: 0 !important;
+    }
+
+    .category-count {
+        color: #7253ed;
+        font-size: 0.9em;
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: #eeebee;
+        text-underline-offset: 2px;
+    }
+
 </style>
 <body>
 <a class="skip-to-main" href="#main-content">Skip to main content</a>
@@ -264,93 +295,6 @@ layout: table_wrappers
                 <div id="data-container"></div>
             </div>
 
-            <script>
-                const dataPath = "/docs/profile/next_data.json";
-
-                async function getData(url) {
-                    try {
-                        const response = await fetch(url);
-                        if (!response.ok) {
-                            throw new Error(`Network response was not ok: ${response.statusText}`);
-                        }
-                        const data = await response.json();
-                        return data;
-                    } catch (error) {
-                        console.error('Fetching data failed:', error);
-                        throw error;
-                    }
-                }
-
-                function createHtml(entry) {
-                    const yearQuarterDiv = document.createElement('div');
-                    yearQuarterDiv.classList.add('entry');
-
-                    const header = document.createElement('h2');
-                    header.textContent = `${entry.year}, ${entry.quarter}`;
-                    yearQuarterDiv.appendChild(header);
-
-                    for (const category in entry.categories) {
-                        const categoryDiv = document.createElement('div');
-                        categoryDiv.classList.add('category');
-
-                        const categoryHeader = document.createElement('h3');
-                        categoryHeader.textContent = category;
-                        categoryDiv.appendChild(categoryHeader);
-                        categoryDiv.innerHTML += `<ul>`;
-
-                        entry.categories[category].forEach(item => {
-                            const itemDiv = document.createElement('div');
-                            itemDiv.classList.add('next-item');
-                            itemDiv.innerHTML = `
-                            <li class="task-list-item">
-                                <input type="checkbox" class="task-list-item-checkbox" ${item.status === "완료" ? "checked=\"checked\"" : ""} disabled="disabled"/>
-                                <div class="next-summary">
-                                    <div class="next-summary-title" ${item.status === "중단" ? "style=\"text-decoration: line-through\"" : ""}/>${item.status === "완료" ? "<a href=\""+item.link+"\">"+item.title+"</a>" : item.title}</div>
-                                    <div class="next-summary-item" style="">${item.estimated_duration}</div>
-                                    <div class="next-summary-item">${item.planned_date}</div>
-                                    <div class="next-summary-item"><b>${item.status}</b></div>
-
-                                </div>
-                            </li>
-                            `;
-
-                            categoryDiv.appendChild(itemDiv);
-                            categoryDiv.innerHTML += `</ul>`;
-                        });
-
-                        yearQuarterDiv.appendChild(categoryDiv);
-                    }
-
-                    return yearQuarterDiv;
-                }
-
-
-                function renderData(container, data) {
-                    data.data.forEach(entry => {
-                        const entryHtml = createHtml(entry);
-                        container.appendChild(entryHtml);
-                    });
-                }
-
-                async function init() {
-                    const container = document.getElementById('data-container');
-                    if (!container) {
-                        throw new Error('Container not found');
-                    }
-
-                    try {
-                        const data = await getData(dataPath);
-                        renderData(container, data);
-                    } catch (error) {
-                        console.error('Error in main execution:', error);
-                    }
-                }
-
-                init();
-
-            </script>
-
-
             {% capture footer_custom %}
             {%- include footer_custom.html -%}
             {% endcapture %}
@@ -402,6 +346,8 @@ layout: table_wrappers
     <div class="search-overlay"></div>
     {% endif %}
 </div>
+
+<script src="/assets/js/whatisnext/load-next-data.js"></script>
 
 {% if site.mermaid %}
 <script>
