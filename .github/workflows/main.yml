@@ -1,0 +1,102 @@
+name: Update Next Data
+
+on:
+  workflow_dispatch:  # 수동 실행
+
+jobs:
+  update_data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Run inline data fetch, transform, and write JSON
+        env:
+          API_URL: ${{ secrets.NOTION_API_URL }}
+          API_KEY: ${{ secrets.NOTION_API_KEY }}
+        run: |
+          node -e "const fs = require('fs');
+          const path = require('path');
+          const axios = require('axios');
+
+          // Notion API 호출 (POST 요청)
+          const API_URL = process.env.API_URL;
+          const API_KEY = process.env.API_KEY;
+          async function fetchData() {
+            try {
+              const response = await axios.post(API_URL, {}, {
+                headers: {
+                  'Authorization': \`Bearer \${API_KEY}\`,
+                  'Notion-Version': '2022-06-28'
+                }
+              });
+              return response.data;
+            } catch (error) {
+              console.error('Error fetching data:', error);
+              process.exit(1);
+            }
+          }
+
+          // Notion API 응답을 원하는 구조로 변환
+          function transformData(data) {
+            const categories = {};
+            for (const page of data.results) {
+              // CATEGORY 필드에서 카테고리 이름 추출 (소문자로 변환)
+              let catName = '';
+              if (page.properties && page.properties.CATEGORY && page.properties.CATEGORY.select && page.properties.CATEGORY.select.name) {
+                catName = page.properties.CATEGORY.select.name.toLowerCase();
+              }
+              if (!catName) continue;
+              // 필요한 필드만 추출 (priority는 예시로 0 할당)
+              const newPage = {
+                title: page.properties && page.properties.TITLE && page.properties.TITLE.title && page.properties.TITLE.title[0]
+                         ? page.properties.TITLE.title[0].plain_text
+                         : '',
+                status: page.properties && page.properties.STATUS && page.properties.STATUS.select
+                         ? page.properties.STATUS.select.name
+                         : '',
+                estimated_duration: page.properties && page.properties.DURATION && page.properties.DURATION.rich_text && page.properties.DURATION.rich_text[0]
+                         ? page.properties.DURATION.rich_text[0].plain_text
+                         : '',
+                planned_date: page.properties && page.properties.DATE && page.properties.DATE.formula
+                         ? page.properties.DATE.formula.string
+                         : '',
+                priority: 0,
+                link: page.properties && page.properties.URL ? page.properties.URL.url : ''
+              };
+              if (!categories[catName]) {
+                categories[catName] = [];
+              }
+              categories[catName].push(newPage);
+            }
+            return { data: [ { categories } ] };
+          }
+
+          async function main() {
+            const rawData = await fetchData();
+            const processedData = transformData(rawData);
+            const outputPath = path.join(__dirname, 'docs', 'profile', 'next_data.json');
+            fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+            fs.writeFileSync(outputPath, JSON.stringify(processedData, null, 2));
+            console.log('Processed data saved to', outputPath);
+          }
+
+          main();"
+
+      - name: Commit processed JSON if changed
+        run: |
+          git config --global user.email "bot@example.com"
+          git config --global user.name "Data Sync Bot"
+          if [ -n "$(git status --porcelain docs/profile/next_data.json)" ]; then
+            git add docs/profile/next_data.json
+            git commit -m "Update processed Notion data [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
