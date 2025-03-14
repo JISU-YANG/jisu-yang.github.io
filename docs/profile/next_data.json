@@ -4,11 +4,24 @@
       "categories": {
         "misson": [
           {
+            "title": "JISULOG 가독성 및 내용 업데이트",
+            "status": "완료",
+            "estimated_duration": "7일",
+            "planned_date": "25.02.",
+            "link": "https://jisulog.com/docs/experience/jisulog-update.html"
+          },
+          {
+            "title": "이력서 Step By Step 챌린지",
+            "status": "완료",
+            "estimated_duration": "14일",
+            "planned_date": "25.02.",
+            "link": "https://jisulog.com/docs/profile/resume.html"
+          },
+          {
             "title": "크루 사이트 세부 요소 개선 리뉴얼",
             "status": "완료",
             "estimated_duration": "3일",
             "planned_date": "24.10.",
-            "priority": 3,
             "link": "https://ego.so/"
           },
           {
@@ -16,23 +29,20 @@
             "status": "중단",
             "estimated_duration": "7일",
             "planned_date": "24.10.",
-            "priority": 4,
             "link": ""
           },
           {
-            "title": "JISULOG 가독성 개선 및 기능 추가 리뉴얼",
+            "title": "JISULOG 가독성 및 미션 기능 추가 업데이트",
             "status": "완료",
             "estimated_duration": "3일",
             "planned_date": "24.10.",
-            "priority": 2,
-            "link": "https://jisulog.com/"
+            "link": "https://jisulog.com/docs/experience/jisulog-update.html"
           },
           {
             "title": "Java 부트캠프 심화 과정",
-            "status": "진행",
-            "estimated_duration": "60일",
+            "status": "완료",
+            "estimated_duration": "120일",
             "planned_date": "24.10.",
-            "priority": 1,
             "link": ""
           }
         ],
@@ -42,7 +52,6 @@
             "status": "완료",
             "estimated_duration": "30분",
             "planned_date": "24.10.",
-            "priority": 3,
             "link": "https://jisulog.com/docs/archive/learning-notes/til/spring-framework/jpa-&-hibernate-&-spring-data-jpa-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%A0%95%EB%A6%AC.html"
           },
           {
@@ -50,7 +59,6 @@
             "status": "완료",
             "estimated_duration": "60분",
             "planned_date": "24.10.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes/til/java/optional.html"
           },
           {
@@ -58,39 +66,13 @@
             "status": "완료",
             "estimated_duration": "60분",
             "planned_date": "24.10.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes/til/java/generics.html"
-          },
-          {
-            "title": "REST와 RESTful의 차이",
-            "status": "예정",
-            "estimated_duration": "30분",
-            "planned_date": "24.10.",
-            "priority": 3,
-            "link": ""
-          },
-          {
-            "title": "도메인 주도적 설계 개념",
-            "status": "예정",
-            "estimated_duration": "30분",
-            "planned_date": "24.12.",
-            "priority": 3,
-            "link": ""
-          },
-          {
-            "title": "에자일, 스크럼, 스프린트",
-            "status": "예정",
-            "estimated_duration": "10분",
-            "planned_date": "24.12.",
-            "priority": 3,
-            "link": ""
           },
           {
             "title": "Request Handler Method",
             "status": "예정",
             "estimated_duration": "30분",
-            "planned_date": "24.11.",
-            "priority": 3,
+            "planned_date": "25.03.",
             "link": ""
           }
         ],
@@ -100,7 +82,6 @@
             "status": "완료",
             "estimated_duration": "1200분",
             "planned_date": "24.10.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#spring-beginner"
           },
           {
@@ -108,7 +89,6 @@
             "status": "완료",
             "estimated_duration": "1440분",
             "planned_date": "24.10.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#spring-intermediate"
           },
           {
@@ -116,7 +96,6 @@
             "status": "완료",
             "estimated_duration": "480분",
             "planned_date": "24.10.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#spring-advanced"
           },
           {
@@ -124,7 +103,6 @@
             "status": "완료",
             "estimated_duration": "480분",
             "planned_date": "24.10.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#docker+cicd"
           },
           {
@@ -132,7 +110,6 @@
             "status": "완료",
             "estimated_duration": "600분",
             "planned_date": "24.10.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#jpa-advanced"
           },
           {
@@ -140,7 +117,6 @@
             "status": "완료",
             "estimated_duration": "480분",
             "planned_date": "24.11.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
           },
           {
@@ -148,7 +124,6 @@
             "status": "완료",
             "estimated_duration": "1080분",
             "planned_date": "24.11.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
           },
           {
@@ -156,31 +131,27 @@
             "status": "완료",
             "estimated_duration": "420분",
             "planned_date": "24.11.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
           },
           {
             "title": "대규모 스트림 처리",
-            "status": "진행",
+            "status": "완료",
             "estimated_duration": "990분",
             "planned_date": "24.12.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
           },
           {
             "title": "모니터링 시스템 및 시큐어 코딩",
-            "status": "예정",
+            "status": "완료",
             "estimated_duration": "480분",
             "planned_date": "24.12.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
           },
           {
             "title": "장애 대응",
-            "status": "예정",
+            "status": "완료",
             "estimated_duration": "810분",
             "planned_date": "24.12.",
-            "priority": 1,
             "link": "https://jisulog.com/docs/archive/learning-notes.html#sparta-til"
           }
         ]
