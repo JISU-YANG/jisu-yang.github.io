@@ -206,10 +206,10 @@ layout: table_wrappers
             {% for sort_item in sort_list %}
 
             <details class="highlight p-5 mt-5" style="border-radius: 6px">
-                <summary id="{{ sort_item | downcase | replace: ' ', '-' }}" class="text-purple-000 fw-500">{{ sort_item }}</summary>
-
-
                 {%- assign temp_study_item = learning-notes | where: "study", sort_item | sort: "chapter" -%}
+
+                <summary id="{{ sort_item | downcase | replace: ' ', '-' }}" class="text-purple-000 fw-500">{{ sort_item }} ({{ temp_study_item.size }})</summary>
+
                 <div markdown="1">
                     <hr>
 
