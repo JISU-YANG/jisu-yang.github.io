@@ -1,6 +1,6 @@
 ---
 layout: note_series
-parent: SPARTA 부트캠프
+parent: SPARTA 일일 회고
 chapter: 15
 title: 20241122_분산 추적과 이벤트 드리븐 아키텍처 및 Spring Cloud
 toc: true

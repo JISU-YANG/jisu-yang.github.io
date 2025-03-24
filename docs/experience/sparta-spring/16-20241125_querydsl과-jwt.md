@@ -1,6 +1,6 @@
 ---
 layout: note_series
-parent: SPARTA 부트캠프
+parent: SPARTA 일일 회고
 chapter: 16
 title: 20241125_Querydsl과 Jwt
 toc: true

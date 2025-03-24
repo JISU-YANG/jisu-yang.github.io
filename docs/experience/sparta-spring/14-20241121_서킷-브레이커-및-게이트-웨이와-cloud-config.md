@@ -1,6 +1,6 @@
 ---
 layout: note_series
-parent: SPARTA 부트캠프
+parent: SPARTA 일일 회고
 chapter: 14
 title: 20241121_서킷 브레이커 및 게이트 웨이와 Cloud Config
 toc: true

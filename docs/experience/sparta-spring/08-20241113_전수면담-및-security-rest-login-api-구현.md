@@ -1,6 +1,6 @@
 ---
 layout: note_series
-parent: SPARTA 부트캠프
+parent: SPARTA 일일 회고
 chapter: 8
 title: 20241113_전수면담 및 Security Rest Login Api 구현
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: note_series
-parent: SPARTA 부트캠프
+parent: SPARTA 일일 회고
 chapter: 10
 title: 20241115_담당 도메인 Api 구현 및 Security 에러 회고
 toc: true
