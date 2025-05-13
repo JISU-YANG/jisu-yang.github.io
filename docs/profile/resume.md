@@ -109,10 +109,10 @@ nav_order: 1
 
 <br>
 
-### 더 궁금하신가요?
+### 더 자세한 소개
 <details class="mb-2">
 <summary style="color: #7253ed; text-decoration: underline; text-decoration-color: #eeebee; text-underline-offset: 4px;">
-💡 저는 이런 개발자입니다.
+저는 이런 개발자입니다.
 </summary>
 <div markdown="1" class="highlight p-5 mt-5 mb-5" style="border-radius: 6px">
 
@@ -125,7 +125,7 @@ nav_order: 1
 
 <details class="mb-2">
 <summary style="color: #7253ed; text-decoration: underline; text-decoration-color: #eeebee; text-underline-offset: 4px;">
-🌱 개발은 이렇게 시작했습니다.
+개발은 이렇게 시작했습니다.
 </summary>
 <div markdown="1" class="highlight p-5 mt-5 mb-5" style="border-radius: 6px">
 
@@ -142,7 +142,7 @@ nav_order: 1
 
 <details class="mb-2">
 <summary style="color: #7253ed; text-decoration: underline; text-decoration-color: #eeebee; text-underline-offset: 4px;">
-🔧 이런 문제를 해결해봤습니다.
+이런 문제를 해결해봤습니다.
 </summary>
 <div markdown="1" class="highlight p-5 mt-5 mb-5" style="border-radius: 6px">
 
@@ -163,7 +163,7 @@ nav_order: 1
 
 <details class="mb-2">
 <summary style="color: #7253ed; text-decoration: underline; text-decoration-color: #eeebee; text-underline-offset: 4px;">
-🤝 이렇게 협업합니다.
+이렇게 협업합니다.
 </summary>
 <div markdown="1" class="highlight p-5 mt-5 mb-5" style="border-radius: 6px">
 
@@ -182,7 +182,7 @@ nav_order: 1
 
 <details class="mb-2">
 <summary style="color: #7253ed; text-decoration: underline; text-decoration-color: #eeebee; text-underline-offset: 4px;">
-🧠 저는 이렇게 일합니다.
+저는 이렇게 일합니다.
 </summary>
 <div markdown="1" class="highlight p-5 mt-5 mb-5" style="border-radius: 6px">
 
