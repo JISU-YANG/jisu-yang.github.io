@@ -109,6 +109,7 @@ nav_order: 1
 
 <br>
 
+### 더 궁금하신가요?
 <details class="mb-2">
 <summary style="color: #7253ed; text-decoration: underline; text-decoration-color: #eeebee; text-underline-offset: 4px;">
 💡 저는 이런 개발자입니다.
